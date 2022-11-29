@@ -14,34 +14,74 @@
       <div class=" group-hover:wave  ">👋</div>
     </a>
 
-    <div class="flex md:order-2 font-semibold ">
-      <button
+    <div class="flex md:order-2 font-semibold  ">
+      <!-- <button
         type="button"
-        class="text-white md:flex hidden hover:text-white  bg-gradient-to-r from-red-500 to-red-800 hover:from-cyan-400 hover:to-sky-500 mx-2 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0  "
+        class="text-white md:flex hidden hover:text-white  bg-gradient-to-r from-red-500 to-red-800 hover:from-cyan-400 hover:to-sky-500 mx-2 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   "
         >SignUp</button
+      > -->
+
+      <!-- <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+        <span
+          class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-white group-hover:-translate-x-0 group-hover:-translate-y-0"
+        />
+        <span
+          class="absolute inset-0 w-full h-full bg-black border-2 border-white group-hover:bg-white"
+        />
+        <span class="relative text-white group-hover:text-black"
+          >Button Text</span
+        >
+      </a> -->
+
+      <!-- href="/" -->
+      <!-- class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group" -->
+      <button
+        class="relative inline-flex items-center justify-center px-6 py-2 mt-1 overflow-hidden font-mono font-medium tracking-tighter text-white bg-red-800 rounded-lg group"
       >
+        <span
+          class="absolute w-0 h-0 transition-all duration-500 ease-out bg-sky-500 rounded-full group-hover:w-56 group-hover:h-56"
+        />
+        <span
+          class="absolute inset-0  -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-red-700"
+        />
+
+        <span class="relative flex ">
+          <img
+            src="google.svg"
+            alt="google"
+            width="20"
+            height="20"
+            class="mr-1"
+          />SignUp
+        </span>
+      </button>
 
       <button
-        data-collapse-toggle="navbar-cta"
-        type="button"
-        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200   "
-        aria-controls="navbar-cta"
-        aria-expanded="false"
+        class="  md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none bg-[#1e1f1f]"
         on:click={() => (nav = !nav)}
       >
-        <svg
-          class="w-6 h-6"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2"
         >
-          <path
-            fill-rule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clip-rule="evenodd"
+          <span
+            aria-hidden="true"
+            class={`block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out ${
+              !nav ? " -translate-y-1.5" : "rotate-45"
+            }`}
           />
-        </svg>
+          <span
+            aria-hidden="true"
+            class={`block absolute  h-0.5 w-5 bg-current   transform transition duration-500 ease-in-out ${
+              nav && "opacity-0"
+            } `}
+          />
+          <span
+            aria-hidden="true"
+            class={`block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out ${
+              nav ? "-rotate-45" : " translate-y-1.5"
+            }`}
+          />
+        </div>
       </button>
     </div>
 
@@ -55,9 +95,12 @@
         class="flex  flex-col p-4 mt-1 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0    "
       >
         <li>
-          <a href="/" class="flex justify-center items-center group">
+          <a
+            href="/"
+            class="flex lg:justify-center justify-between items-center group"
+          >
             <div
-              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 text-white rounded group-hover:bg-gray-100 md:group-hover:bg-transparent md:group-hover:text-cyan-500 md:p-0"
+              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-500 md:p-0"
             >
               About
             </div>
@@ -71,9 +114,12 @@
           </a>
         </li>
         <li>
-          <a href="/" class="flex justify-center items-center group">
+          <a
+            href="/"
+            class="flex lg:justify-center justify-between items-center group"
+          >
             <div
-              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 text-white rounded group-hover:bg-gray-100 md:group-hover:bg-transparent md:group-hover:text-cyan-500 md:p-0"
+              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-500 md:p-0"
             >
               Blogs
             </div>
@@ -87,9 +133,12 @@
           </a>
         </li>
         <li>
-          <a href="/" class="flex justify-center items-center group">
+          <a
+            href="/"
+            class="flex lg:justify-center justify-between items-center group"
+          >
             <div
-              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3  text-white rounded group-hover:bg-gray-100 md:group-hover:bg-transparent md:group-hover:text-cyan-500 md:p-0 pr-4  "
+              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 lg:pl-3 pl-1 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-500 md:p-0  "
             >
               Projects
             </div>
@@ -98,7 +147,7 @@
               alt="About"
               width="40px"
               height="40px"
-              class="flex justify-center items-center group-hover:wave -ml-4 lg:-ml-0 "
+              class="flex justify-center items-center group-hover:wave  "
             />
           </a>
         </li>
