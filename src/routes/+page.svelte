@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { concurrent } from "svelte-typewriter";
+  // import { concurrent } from "svelte-typewriter";
+  import concurrent from "svelte-typewriter/modes/concurrent";
 </script>
 
 <main>
