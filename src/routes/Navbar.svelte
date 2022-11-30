@@ -15,26 +15,6 @@
     </a>
 
     <div class="flex md:order-2 font-semibold  ">
-      <!-- <button
-        type="button"
-        class="text-white md:flex hidden hover:text-white  bg-gradient-to-r from-red-500 to-red-800 hover:from-cyan-400 hover:to-sky-500 mx-2 hover:bg-cyan-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center   "
-        >SignUp</button
-      > -->
-
-      <!-- <a href="#_" class="relative inline-block px-4 py-2 font-medium group">
-        <span
-          class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-white group-hover:-translate-x-0 group-hover:-translate-y-0"
-        />
-        <span
-          class="absolute inset-0 w-full h-full bg-black border-2 border-white group-hover:bg-white"
-        />
-        <span class="relative text-white group-hover:text-black"
-          >Button Text</span
-        >
-      </a> -->
-
-      <!-- href="/" -->
-      <!-- class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-mono font-medium tracking-tighter text-white bg-gray-800 rounded-lg group" -->
       <button
         class="relative inline-flex items-center justify-center px-6 py-2 mt-1 overflow-hidden font-mono font-medium tracking-tighter text-white bg-red-800 rounded-lg group"
       >
