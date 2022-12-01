@@ -1,7 +1,7 @@
-<section class="bg-[#181818]   text-white  ">
+<section class="  text-white  ">
   <section class="my-11">
-    <h2 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
-      Recommended reading <span class="wave">📖</span>
+    <h2 class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">
+      Check out some of the stuff I've built<span class="animate-bounce">👇</span>
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 ">
@@ -162,7 +162,7 @@
         />
         <span
           class="relative text-cyan-600 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white"
-          >See More Articles</span
+          >See More Projects</span
         >
       </a>
     </div>

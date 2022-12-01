@@ -15,15 +15,9 @@
     </a>
 
     <div class="flex md:order-2 font-semibold  ">
-      <button
-        class="relative inline-flex items-center justify-center px-6 py-2 mt-1 overflow-hidden font-mono font-medium tracking-tighter text-white bg-red-800 rounded-lg group"
-      >
-        <span
-          class="absolute w-0 h-0 transition-all duration-500 ease-out bg-sky-500 rounded-full group-hover:w-56 group-hover:h-56"
-        />
-        <span
-          class="absolute inset-0  -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-red-700"
-        />
+     <button class="relative inline-flex items-center justify-center px-6 py-2 mt-1 overflow-hidden font-mono font-medium tracking-tighter text-white bg-red-800 rounded-lg group">
+        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-sky-500 rounded-full group-hover:w-56 group-hover:h-56"/>
+        <span class="absolute inset-0  -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-red-700"/>
 
         <span class="relative flex ">
           <img
@@ -38,8 +32,7 @@
 
       <button
         class="  md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none bg-[#1e1f1f]"
-        on:click={() => (nav = !nav)}
-      >
+        on:click={() => (nav = !nav)}>
         <div
           class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2"
         >
@@ -63,6 +56,8 @@
           />
         </div>
       </button>
+
+
     </div>
 
     <div
@@ -76,7 +71,7 @@
       >
         <li>
           <a
-            href="/"
+            href="/about"
             class="flex lg:justify-center justify-between items-center group"
           >
             <div
