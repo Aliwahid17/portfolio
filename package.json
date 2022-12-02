@@ -30,6 +30,7 @@
 	"type": "module",
 	"dependencies": {
 		"@vercel/analytics": "^0.1.5",
+		"cookie": "^0.5.0",
 		"svelte-typewriter": "^3.1.4",
 		"web-vitals": "^3.1.0"
 	}
