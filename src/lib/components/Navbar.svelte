@@ -90,7 +90,7 @@
         </li>
         <li>
           <a
-            href="/"
+            href="/blogs"
             class="flex lg:justify-center justify-between items-center group"
           >
             <div

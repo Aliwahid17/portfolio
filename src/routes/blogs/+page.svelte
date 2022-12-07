@@ -1,8 +1,15 @@
-<section class="bg-[#181818]   text-white  ">
-  <section class="my-11">
-    <h2 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
+<script lang='ts' >
+
+
+
+</script>
+
+
+<section class="  text-white  ">
+  <section class="my-8">
+    <!-- <h2 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
       Recommended reading <span class="wave">📖</span>
-    </h2>
+    </h2> -->
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 ">
       <article
@@ -148,7 +155,7 @@
 
     </div>
 
-    <div class="flex justify-center items-center  py-10 ">
+    <!-- <div class="flex justify-center items-center  py-10 ">
       <a
         href="/"
         class="relative  inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group"
@@ -165,6 +172,6 @@
           >See More Articles</span
         >
       </a>
-    </div>
+    </div> -->
   </section>
 </section>

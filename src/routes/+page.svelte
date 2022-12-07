@@ -1,11 +1,28 @@
 <script lang="ts">
-  import Blogs from "./Blogs.svelte";
-  import Intro from "./Intro.svelte";
-  import Projects from "./Projects.svelte";
+  import Blogs from '$lib/components/Blogs.svelte';
+  import Intro from "$lib/components/Intro.svelte";
+  import Projects from "$lib/components/Projects.svelte";
+
+
+  import type { PageData } from './$types';
+
+  export let data : PageData;
+  const { posts } = data
+
+  const content = posts.sort((a , b) => Date.parse(b.datePublished) - Date.parse(a.datePublished))
+  // console.log(content)
+  const homeContent : any [] = []
+
+  for (let index = 0; index < 4; index++) {
+    homeContent.push(content[index])
+  }
+
+  // console.log(homeContent)
+
 </script>
 
 <main>
   <Intro />
-  <Blogs />
+  <Blogs posts={homeContent} />
   <Projects />
 </main>
