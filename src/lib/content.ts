@@ -1,6 +1,4 @@
-import type { PageLoad } from "./$types";
-
-export const load: PageLoad = async () => {
+export const content  = async () => {
     const mdModules = import.meta.glob("../content/*.{md,svx}");
     // console.log(Object.keys(mdModules))
     const posts = await Promise.all(
@@ -45,5 +43,14 @@ export const load: PageLoad = async () => {
             };
         })
     );
+
+    
+
     return { posts };
 };
+
+export const sortContent = async () => {
+    const {posts} = await content()
+    return posts.sort((first: any, second: any) => Date.parse(second.datePublished) - Date.parse(first.datePublished))
+}
+

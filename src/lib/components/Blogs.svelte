@@ -1,84 +1,8 @@
-<!-- <script context="module" lang="ts">
-import type { PageLoad } from "./$types";
-
-export const load: PageLoad = async () => {
-    const mdModules = import.meta.glob("../../content/*.{md,svx}");
-    
-    const posts = await Promise.all(
-        Object.keys(mdModules).map(async (path) => {
-            const slug = path.slice(14, -3);
-            const { metadata }: any = await mdModules[path]();
-            const {
-                author,
-                postTitle,
-                focusKeyphrase,
-                datePublished,
-                lastUpdated,
-                seoMetaDescription,
-                featuredImage,
-                featuredImageAlt,
-                ogImage,
-                ogSquareImage,
-                twitterImage,
-                categories,
-                tags,
-            } = metadata;
-
-            return {
-                postTitle,
-                focusKeyphrase,
-                datePublished,
-                lastUpdated,
-                seoMetaDescription,
-                featuredImage,
-                featuredImageAlt,
-                ogImage,
-                ogSquareImage,
-                twitterImage,
-                categories,
-                tags,
-                author,
-                slug,
-            };
-        })
-    );
-    return { posts };
-};
-</script>
-
 <script lang="ts">
-  // import type { PageData } from "./$types";
-  // import {data} 
-  //  let mdModules
-  // console.log(mdModules)
+  import { parseTag } from "$lib/parseTag";
+  import { tagIndex } from "$lib/tagIndex";
 
-  export let data ;
-
-  console.log(data.posts)
-
-  // // export let data: PageData;
-  // // export let posts: PageData;
-  // export let load: PageData;
-  // console.log(load)
-  // console.log(data)
-
-  // console.log('../../content/demo.md'.slice(14,-3))
-  // console.log(import.meta.glob("../../content/*.{md,svx}"))
-
-  // const { posts } = data;
-</script> -->
-
-<script lang="ts">
-
-  import type { PageData } from "./$types";
-
-  export let posts : PageData;
-  // const { posts } = data
-  // console.log(data)
-
-  // console.log(...posts[2])
-
-  
+  export let posts: any;
 
 </script>
 
@@ -89,58 +13,64 @@ export const load: PageLoad = async () => {
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 ">
+      {#each posts as post}
+        <article
+          class="rounded-xl my-5 md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
+        >
+          <div class="rounded-[10px]   bg-gray-900 p-2 ">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
+              alt=""
+              class=" rounded-xl mb-3 "
+            />
+            <time
+              datetime="2022-10-10"
+              class="block text-xs text-gray-400 px-2 "
+            >
+              <!-- 10th Oct 2022 -->
+              {post.datePublished}
+            </time>
 
-{#each posts as post}
+            <a href={`/blogs/${post.slug}`}>
+              <h3 class="mt-0.5 px-2 text-lg font-bold text-white">
+                <!-- How to center an element using JavaScript and jQuery -->
+                {post.postTitle}
+              </h3>
+            </a>
 
-
-
-<article
-        class="rounded-xl my-5 md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75">
-        <div class="rounded-[10px]   bg-gray-900 p-2 ">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-            alt=""
-            class=" rounded-xl mb-3 "
-          />
-          <time datetime="2022-10-10" class="block text-xs text-gray-400 px-2 ">
-            <!-- 10th Oct 2022 -->
-            {post.datePublished}
-          </time>
-
-          <a href={`/blogs/${post.slug}`}>
-            <h3 class="mt-0.5 px-2 text-lg font-bold text-white">
-              <!-- How to center an element using JavaScript and jQuery -->
-              {post.postTitle}
-            </h3>
-          </a>
-
-          <p class="mt-0.5 px-2 text-sm font-medium  text-white">
-            <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            <p class="mt-0.5 px-2 text-sm font-medium  text-white">
+              <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Repellendus illo rem officia aspernatur a earum minima est. Culpa
             animi quisquam praesentium quidem, fugit libero ducimus! Esse unde
             repellat dicta maiores, consectetur reprehenderit dolor quos
             similique? -->
-            {post.seoMetaDescription}
-          </p>
-          
-          <div class="mt-4 mb-2 flex flex-wrap gap-1 px-2 ">
+              {post.seoMetaDescription}
+            </p>
 
+            {#await tagIndex(post.postTitle) then tagKey}
+              {#await parseTag() then tags}
+                <div class="mt-4 mb-2 flex flex-wrap gap-1 px-2 ">
+                  <!-- {#each tags[index(post.postTitle)] as tag} -->
+                  <!-- {#each tags[0] as tag} -->
 
-
-
-            <span
-              class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-400 text-whte"
-            >
-            Snippet
-          </span>
-         
-        </div>
-      </div>
-    </article>
-    
-    {/each}
-
-
+                  {#each tags[tagKey] as tag}
+                    <a
+                      href="/tags"
+                      class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-400 text-whte"
+                    >
+                      <!-- Snippet -->
+                      <!-- {
+  post.tags
+} -->
+                      {`#${tag}`}
+                    </a>
+                  {/each}
+                </div>
+              {/await}
+            {/await}
+          </div>
+        </article>
+      {/each}
 
       <!-- <article
         class="rounded-xl my-5 md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75">
@@ -247,14 +177,11 @@ export const load: PageLoad = async () => {
           </div>
         </div>
       </article> -->
-
-
-
-
     </div>
 
     <div class="flex justify-center items-center  py-10 ">
       <a
+      data-sveltekit-preload-data='hover'
         href="/blogs"
         class="relative  inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group"
       >
@@ -273,7 +200,6 @@ export const load: PageLoad = async () => {
     </div>
   </section>
 </section>
-
 
 <!-- <section class="bg-[#181818]   text-white  ">
   <section class="my-11">
@@ -448,7 +374,3 @@ export const load: PageLoad = async () => {
     </div>
   </section>
 </section> -->
-
-
-
-

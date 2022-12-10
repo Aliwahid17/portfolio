@@ -12,7 +12,7 @@ ogImage: best-medium-format-camera-for-starting-out-open-graph.jpg
 ogSquareImage: best-medium-format-camera-for-starting-out-open-graph-square.jpg
 twitterImage: best-medium-format-camera-for-starting-out-twitter.jpg
 categories:  dev
-tags: tech , game
+tags: tech,game
 
 
 # author : Wahid Ali

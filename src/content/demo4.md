@@ -1,7 +1,7 @@
 ---
 
 author : Wahid Ali
-postTitle: Best Medium Format Camera for Starting Out
+postTitle: Best Medium Format Camera for Starting Outs
 focusKeyphrase: best medium format camera
 datePublished: 2021-11-07T16:04:42.000+0100
 lastUpdated: 2021-04-14T10:17:52.000+0100
@@ -12,7 +12,7 @@ ogImage: best-medium-format-camera-for-starting-out-open-graph.jpg
 ogSquareImage: best-medium-format-camera-for-starting-out-open-graph-square.jpg
 twitterImage: best-medium-format-camera-for-starting-out-twitter.jpg
 categories:  dev
-tags: tech , game
+tags: tech,game,vue,tailwindcss
 
 
 # author : Wahid Ali

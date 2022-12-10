@@ -1,28 +1,33 @@
 <script lang="ts">
-  import Blogs from '$lib/components/Blogs.svelte';
+  import Blogs from "$lib/components/Blogs.svelte";
   import Intro from "$lib/components/Intro.svelte";
+  import Loading from "$lib/components/Loading.svelte";
   import Projects from "$lib/components/Projects.svelte";
+  import { sortContent } from "$lib/content";
 
+  const homeContents = async () => {
+    const posts = await sortContent();
+    let content: any[] = [];
 
-  import type { PageData } from './$types';
+    for (let index = 0; index < 4; index++) {
+      content.push(posts[index]);
+    }
 
-  export let data : PageData;
-  const { posts } = data
+    return content;
+  };
 
-  const content = posts.sort((a , b) => Date.parse(b.datePublished) - Date.parse(a.datePublished))
-  // console.log(content)
-  const homeContent : any [] = []
-
-  for (let index = 0; index < 4; index++) {
-    homeContent.push(content[index])
-  }
-
-  // console.log(homeContent)
+  sortContent().then(a => a.map(b => console.log(b.datePublished.splice(10))))
 
 </script>
 
 <main>
   <Intro />
-  <Blogs posts={homeContent} />
+
+  {#await homeContents()}
+    <Loading />
+  {:then homeContent}
+    <Blogs posts={homeContent} />
+  {/await}
+
   <Projects />
 </main>
