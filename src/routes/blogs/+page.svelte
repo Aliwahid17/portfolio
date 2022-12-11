@@ -1,6 +1,7 @@
 <script lang="ts">
   import Loading from "$lib/components/Loading.svelte";
 import { sortContent } from "$lib/content";
+  import { dateFormat } from "$lib/date";
   import { parseTag } from "$lib/parseTag";
   import { tagIndex } from "$lib/tagIndex";
 </script>
@@ -32,15 +33,16 @@ import { sortContent } from "$lib/content";
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
                 alt=""
                 class=" rounded-xl mb-3 "
+                loading='lazy'
               />
               <time
-                datetime="2022-10-10"
+                datetime={post.datePublished}
                 class="block text-xs text-gray-400 px-2 "
               >
-                {post.datePublished}
+                {dateFormat(post.datePublished)}
               </time>
 
-              <a href={`/blogs/${post.slug}`}>
+              <a href={`/blogs/${post.slug}`} data-sveltekit-preload-data='hover' >
                 <h3 class="mt-0.5 px-2 text-lg font-bold text-white">
                   <!-- How to center an element using JavaScript and jQuery -->
                   {post.postTitle}

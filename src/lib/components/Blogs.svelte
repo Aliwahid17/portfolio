@@ -1,15 +1,21 @@
 <script lang="ts">
+  import { dateFormat } from "$lib/date";
   import { parseTag } from "$lib/parseTag";
   import { tagIndex } from "$lib/tagIndex";
+  
 
   export let posts: any;
+
+  // console.log(posts[0].datePublisheds)
+
+  // posts.map((a) => console.log(a.datePublished.split("T")[0].split("-")))
 
 </script>
 
 <section class="bg-[#181818]   text-white  ">
   <section class="my-11">
     <h2 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
-      Recommended reading <span class="wave">📖</span>
+      Recommended Reading <span class="wave">📖</span>
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 ">
@@ -22,16 +28,17 @@
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
               alt=""
               class=" rounded-xl mb-3 "
+              loading="lazy"
             />
             <time
-              datetime="2022-10-10"
+              datetime={post.datePublished}
               class="block text-xs text-gray-400 px-2 "
             >
               <!-- 10th Oct 2022 -->
-              {post.datePublished}
+              {dateFormat(post.datePublished)}
             </time>
 
-            <a href={`/blogs/${post.slug}`}>
+            <a href={`/blogs/${post.slug}`} data-sveltekit-preload-data='hover'>
               <h3 class="mt-0.5 px-2 text-lg font-bold text-white">
                 <!-- How to center an element using JavaScript and jQuery -->
                 {post.postTitle}

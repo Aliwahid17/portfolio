@@ -1,8 +1,16 @@
 <script lang="ts">
+    import About from '$lib/assets/about.svg'
+  import Project from '$lib/assets/projects.svg'
+  import Blog from '$lib/assets/blog.svg'
+
+  
+  
   let nav = false;
+
+
 </script>
 
-<nav
+<header
   class="bg-[#1e1f1f]  z-10 sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5  "
 >
   <div class="container flex flex-wrap items-center justify-between mx-auto ">
@@ -65,7 +73,7 @@
 
     <!-- </div> -->
 
-    <div
+    <nav
       class={`items-center ${
         !nav && "hidden"
       } justify-between  w-full md:flex md:w-auto md:order-1`}
@@ -90,11 +98,12 @@
               Blogs
             </div>
             <img
-              src="blog.svg"
-              alt="About"
+              src={Blog}
+              alt="Blogs"
               width="40px"
               height="40px"
               class="flex justify-center items-center group-hover:wave "
+              loading='lazy'
             />
           </a>
         </li>
@@ -112,11 +121,12 @@
               Projects
             </div>
             <img
-              src="projects.svg"
-              alt="About"
+              src={Project}
+              alt="Projects"
               width="40px"
               height="40px"
               class="flex justify-center items-center group-hover:wave  "
+              loading='lazy'
             />
           </a>
         </li>
@@ -134,17 +144,18 @@
               About
             </div>
             <img
-              src="about.svg"
+              src={About}
               alt="About"
               width="40px"
               height="40px"
               class="flex justify-center items-center group-hover:wave "
+              loading='lazy'
             />
           </a>
         </li>
 
         
       </ul>
-    </div>
+    </nav>
   </div>
-</nav>
+</header>

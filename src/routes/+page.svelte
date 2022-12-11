@@ -16,7 +16,7 @@
     return content;
   };
 
-  sortContent().then(a => a.map(b => console.log(b.datePublished.splice(10))))
+  // sortContent().then(a => a.map(b => console.log(b.datePublished.splice(10))))
 
 </script>
 
