@@ -1,7 +1,7 @@
 <script lang="ts">
   import "../app.css";
-  import Footer from "./Footer.svelte";
-  import Navbar from "./Navbar.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+  import Navbar from "$lib/components/Navbar.svelte";
   import { inject } from "@vercel/analytics";
   import { webVitals } from "$lib/vitals";
   import { browser } from "$app/environment";
