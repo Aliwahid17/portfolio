@@ -1,10 +1,10 @@
 <script lang="ts">
   import concurrent from "svelte-typewriter/modes/concurrent";
-    import Gmail from '$lib/assets/gmail.svg'
-  import Github from '$lib/assets/github.svg'
-  import Instagram from '$lib/assets/instagram.svg'
-  import Twitter from '$lib/assets/twitter.svg'
-  import Linkedin from '$lib/assets/linkedin.svg'
+  import Gmail from "$lib/assets/gmail.svg";
+  import Github from "$lib/assets/github.svg";
+  import Instagram from "$lib/assets/instagram.svg";
+  import Twitter from "$lib/assets/twitter.svg";
+  import Linkedin from "$lib/assets/linkedin.svg";
 </script>
 
 <section class="text-white  md:my-24 my-16 ">
@@ -41,19 +41,37 @@
 
     <div class="flex justify-evenly mt-8">
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Gmail} alt="gmail" width="35" height="35"  loading='lazy'/>
+        <img src={Gmail} alt="gmail" width="35" height="35" loading="lazy" />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Github} alt="github" width="35" height="35" loading='lazy' />
+        <img src={Github} alt="github" width="35" height="35" loading="lazy" />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Instagram} alt="instagram" width="35" height="35"  loading='lazy'/>
+        <img
+          src={Instagram}
+          alt="instagram"
+          width="35"
+          height="35"
+          loading="lazy"
+        />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Twitter} alt="twitter" width="35" height="35"  loading='lazy'/>
+        <img
+          src={Twitter}
+          alt="twitter"
+          width="35"
+          height="35"
+          loading="lazy"
+        />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Linkedin} alt="linkedin" width="35" height="35" loading='lazy' />
+        <img
+          src={Linkedin}
+          alt="linkedin"
+          width="35"
+          height="35"
+          loading="lazy"
+        />
       </a>
     </div>
   </section>

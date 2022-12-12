@@ -1,47 +1,5 @@
 <script lang="ts">
 import Intro from "$lib/components/Intro.svelte";
-
-// console.log(document.querySelector(body))
-
-// document.querySelector(document).ready(function(){
-//     animateDiv('.rust');
-//     animateDiv('.typescript');
-//     animateDiv('.c');
-//     animateDiv('.cplus');
-//     animateDiv('.python');
-// });
-
-// function makeNewPosition(){
-    
-//     // Get viewport dimensions (remove the dimension of the div)
-//     var h = document.querySelector(window).height() - 50;
-//     var w = document.querySelector(window).width() - 50;
-    
-//     var nh = Math.floor(Math.random() * h);
-//     var nw = Math.floor(Math.random() * w);
-    
-//     return [nh,nw];    
-    
-// }
-
-// function animateDiv(myclass:any){
-//     var newq = makeNewPosition();
-//     document.querySelector(myclass).animate({ top: newq[0], left: newq[1] }, 1000,   function(){
-//       animateDiv(myclass);        
-//     });
-    
-// };
-
-// console.log(document.)
-
-
-
-const newPosition = () => {
-  
-}
-
-
-
 </script>
 
 <Intro />

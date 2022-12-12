@@ -3,15 +3,10 @@
   export let imageAlt: string;
 
 
-//   function getImageUrl(image : string) {
-//   return new URL(`lib/assets/content/${image.slice(0,-4)}/${image}`, import.meta.resolve(`lib/assets/content/${image.slice(0,-4)}/${image}`,)).href
-// }
-
-// console.log(getImageUrl(image))
-
 </script>
 
-<!-- <img src={   `   lib/assets/content/${image.slice(0,-4)}/${image}     ` } alt={imageAlt}> -->
-<picture>
-    <img src={image} alt={imageAlt} loading='lazy' />
+
+<picture class="flex justify-center items-center">
+    <!-- <img class=" rounded-md p-1 my-5 md:mx-28 "  src={image} alt={imageAlt} loading='lazy' /> -->
+    <img class=" rounded-md  my-3  "  src={image} alt={imageAlt} loading='lazy' />
 </picture>

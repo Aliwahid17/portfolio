@@ -1,13 +1,11 @@
-<script lang='ts'>
-
-     import type { PageData } from "./$types";
-
-     export let data : PageData
-
-     const {page , post} = data
-
+<script lang="ts">
+  import type { PageData } from "./$types";
+  export let data: PageData;
+  const { page } = data;
 </script>
 
-<section class="text-white ">
-     <svelte:component this={page} />
-</section>
+<main class="text-white text-md">
+  <article class="m-3 md:mx-32 lg:mx-96">
+    <svelte:component this={page} />
+  </article>
+</main>
