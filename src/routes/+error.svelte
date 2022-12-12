@@ -1,5 +1,5 @@
-<script lang='ts'>
-  import Error from '$lib/assets/not.webp'
+<script lang="ts">
+  import Error from "$lib/assets/not.webp";
 </script>
 
 <div class="bg-indigo-900 relative overflow-hidden h-screen z-0 ">
@@ -7,7 +7,7 @@
     src={Error}
     alt="NotFound"
     class="absolute h-screen w-screen object-cover"
-    loading='lazy'
+    loading="lazy"
   />
   <div class="inset-0 bg-black opacity-25 absolute" />
   <div
@@ -19,11 +19,7 @@
       >
         You are all alone here
       </h1>
-      <p
-        class="font-extrabold text-8xl my-44 text-white animate-bounce"
-      >
-        404
-      </p>
+      <p class="font-extrabold text-8xl my-44 text-white animate-bounce">404</p>
     </div>
   </div>
 </div>
