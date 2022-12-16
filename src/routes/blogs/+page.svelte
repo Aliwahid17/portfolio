@@ -1,7 +1,8 @@
 <script lang="ts">
   import Blogs from "$lib/components/Blogs.svelte";
-  import { items } from "$lib/store";
-  const { posts, parseTag } = $items;
+  import type { PageData } from "./$types";
+  export let data : PageData
+  const { posts, parseTag } = data;
 </script>
 
 <section class="  text-white my-8 ">
