@@ -40,7 +40,7 @@
           {#each parseTag[tagIndex(posts, post.postTitle)] as tag}
             <a
               href="/tags"
-              class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-400 text-whte"
+              class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 text-white"
             >
               {`#${tag}`}
             </a>

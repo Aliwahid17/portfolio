@@ -41,35 +41,29 @@
 
     <div class="flex justify-evenly mt-8">
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Gmail} alt="gmail" width="35" height="35" loading="lazy" />
+        <img src={Gmail} alt="gmail" class='w-9 h-9' loading="lazy" />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
-        <img src={Github} alt="github" width="35" height="35" loading="lazy" />
+        <img src={Github} alt="github" class='w-9 h-9' loading="lazy" />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
         <img
           src={Instagram}
-          alt="instagram"
-          width="35"
-          height="35"
+          alt="instagram" class='w-9 h-9'
           loading="lazy"
         />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
         <img
           src={Twitter}
-          alt="twitter"
-          width="35"
-          height="35"
+          alt="twitter" class='w-9 h-9'
           loading="lazy"
         />
       </a>
       <a href="/" target="_blank" class="hover:animate-pulse">
         <img
           src={Linkedin}
-          alt="linkedin"
-          width="35"
-          height="35"
+          alt="linkedin" class='w-9 h-9'
           loading="lazy"
         />
       </a>
