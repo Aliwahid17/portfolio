@@ -3,7 +3,8 @@ export const content = async () => {
     const posts = await Promise.all(
         Object.keys(mdModules).map(async (path) => {
             const slug = path.slice(11, -3);
-            const { metadata }: any = await mdModules[path]();
+            const { metadata } : any = await mdModules[path]();
+            
             const {
                 author,
                 postTitle,
@@ -46,6 +47,6 @@ export const content = async () => {
 
 export const sortContent = async () => {
     const { posts } = await content()
-    return posts.sort((first: any, second: any) => Date.parse(second.datePublished) - Date.parse(first.datePublished))
+    return posts.sort((first, second) => Date.parse(second.datePublished) - Date.parse(first.datePublished))
 }
 
