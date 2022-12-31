@@ -1,8 +1,9 @@
 export const content = async () => {
-    const mdModules = import.meta.glob("../content/*.{md,svx}");
+    const mdModules = import.meta.glob("./content/*.{md,svx}");
     const items = await Promise.all(
         Object.keys(mdModules).map(async (path) => {
-            const slug = path.slice(11, -3);
+            // const slug = path.slice(11, -3);
+            const slug = path.slice(10, -3);
             const { metadata } : any = await mdModules[path]();
             
             const {
@@ -14,11 +15,9 @@ export const content = async () => {
                 seoMetaDescription,
                 featuredImage,
                 featuredImageAlt,
-                ogImage,
-                ogSquareImage,
-                twitterImage,
                 categories,
                 tags,
+                readingTime
             } = metadata;
 
             return {
@@ -29,13 +28,11 @@ export const content = async () => {
                 seoMetaDescription,
                 featuredImage,
                 featuredImageAlt,
-                ogImage,
-                ogSquareImage,
-                twitterImage,
                 categories,
                 tags,
                 author,
                 slug,
+                readingTime
             };
         })
     );
@@ -49,8 +46,5 @@ export const content = async () => {
     return { posts , parseTag };
 };
 
-// export const sortContent = async () => {
-//     const { posts } = await content()
-//     return posts.sort((first, second) => Date.parse(second.datePublished) - Date.parse(first.datePublished))
-// }
+
 

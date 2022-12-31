@@ -4,8 +4,10 @@ export const load: PageLoad = async ({ params }) => {
 
     const { slug } = params;
 
-    const postPromie = import(`../../../content/${slug}.md`)
-    const pagePromise = import(`../../../content/${slug}.md`)
+    // const postPromie = import(`../../content/${slug}.md`)
+    // const pagePromise = import(`../../content/${slug}.md`)
+    const postPromie = import(`../../../lib/content/${slug}.md`)
+    const pagePromise = import(`../../../lib/content/${slug}.md`)
 
 
     const [postResult, pageResult] = await Promise.all([
@@ -31,11 +33,9 @@ export const load: PageLoad = async ({ params }) => {
         seoMetaDescription,
         featuredImage,
         featuredImageAlt,
-        ogImage,
-        ogSquareImage,
-        twitterImage,
         categories,
         tags,
+        readingTime
     } = metadata;
 
     return {
@@ -48,11 +48,9 @@ export const load: PageLoad = async ({ params }) => {
             seoMetaDescription,
             featuredImage,
             featuredImageAlt,
-            ogImage,
-            ogSquareImage,
-            twitterImage,
             categories,
             tags,
+            readingTime
         },
         slug,
         page,

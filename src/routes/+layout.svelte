@@ -21,6 +21,14 @@
   inject();
 </script>
 
-<Navbar />
-<slot {data} />
-<Footer />
+      <!-- <div class=" w-full m-0 ">
+        <div class="container  mx-auto px-3 md:px-20 lg:px-44 xl:px-56 ">
+          <div class="flex flex-col items-center justify-center py-4"> -->
+
+  <Navbar />
+  <slot {data} />
+  <Footer />
+  
+<!-- </div>
+</div>
+</div> -->

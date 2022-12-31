@@ -11,12 +11,14 @@
   }
 </script>
 
+
+
 <main>
 
   <Intro />
 
-  <section class="bg-[#181818] my-11   text-white  ">
-    <h2 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
+  <section class="bg-[#181818] my-11  text-white  ">
+    <h2 class=" text-2xl font-semibold flex justify-center items-center py-11  ">
       Recommended Reading <span class="wave">📖</span>
     </h2>
 
@@ -36,7 +38,7 @@
           class="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-cyan-400 rounded-md opacity-0 group-hover:opacity-100 "
         />
         <span
-          class="relative text-cyan-600 transition-colors duration-200 ease-in-out delay-100 group-hover:text-white"
+          class="relative text-cyan-700  transition-colors duration-200 ease-in-out delay-100 group-hover:text-white"
           >See More Articles</span
         >
       </a>
