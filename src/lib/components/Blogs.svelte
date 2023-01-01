@@ -1,21 +1,25 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
   import { tagIndex } from "$lib/tagIndex";
-
   export let posts: any;
-  export let parseTag:string[];
-
+  export let parseTag: string[];
+  function getImageUrl(name: string) {
+    return new URL(
+      `../assets/content/${name.slice(0, -4)}/${name}`,
+      import.meta.url
+    ).href;
+  }
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 ">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 text-white ">
   {#each posts as post}
     <article
-      class="rounded-xl my-5 md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
+      class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
     >
       <div class="rounded-[10px]   bg-gray-900 p-2 ">
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/640px-Image_created_with_a_mobile_phone.png"
-          alt=""
+          src={getImageUrl(post.featuredImage)}
+          alt={post.featuredImageAlt}
           class=" rounded-xl mb-3 "
           loading="lazy"
         />

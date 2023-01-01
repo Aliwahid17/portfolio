@@ -23,21 +23,13 @@
       <img src={Github} alt="github" class="w-9 h-9" loading="lazy" />
     </a>
     <a href="/" target="_blank" class="hover:animate-pulse">
-      <img
-        src={Instagram}
-        alt="instagram" class="w-9 h-9"
-        loading="lazy"
-      />
+      <img src={Instagram} alt="instagram" class="w-9 h-9" loading="lazy" />
     </a>
     <a href="/" target="_blank" class="hover:animate-pulse">
       <img src={Twitter} alt="twitter" class="w-9 h-9" loading="lazy" />
     </a>
     <a href="/" target="_blank" class="hover:animate-pulse">
-      <img
-        src={Linkedin}
-        alt="linkedin" class="w-9 h-9"
-        loading="lazy"
-      />
+      <img src={Linkedin} alt="linkedin" class="w-9 h-9" loading="lazy" />
     </a>
   </div>
 
@@ -45,5 +37,19 @@
     &#169; Copyright 2022 <a href="/" class="font-bold underline mx-1  ">
       Wahid Ali
     </a>
+  </p>
+  <p class="flex justify-evenly items-center text-lg my-5 md:mx-5 lg:mx-24">
+    <!-- &#169; Copyright 2022 <a href="/" class="font-bold underline mx-1  ">
+      Wahid Ali
+    </a> -->
+    <a href="/"  class="text-base font-semibold hover:underline hover:text-cyan-400"  data-sveltekit-preload-data="hover"  > Home </a>
+    <span class="border-r-2 border-l-white">&nbsp;</span>
+    <a href="/blogs"  class="text-base font-semibold hover:underline hover:text-cyan-400"  data-sveltekit-preload-data="hover"  > Blogs </a>
+    <span class="border-r-2 border-l-white">&nbsp;</span>
+    <a href="/projects" class="text-base font-semibold hover:underline hover:text-cyan-400" data-sveltekit-preload-data="hover" > Projects </a>
+    <span class="border-r-2 border-l-white">&nbsp;</span>
+    <a href="/about" class="text-base font-semibold hover:underline hover:text-cyan-400" data-sveltekit-preload-data="hover" > About </a>
+    <span class="border-r-2 border-l-white">&nbsp;</span>
+    <a href="/tags" class="text-base font-semibold hover:underline hover:text-cyan-400" data-sveltekit-preload-data="hover" > Tags </a>
   </p>
 </footer>
