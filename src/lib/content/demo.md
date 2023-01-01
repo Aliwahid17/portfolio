@@ -28,7 +28,7 @@ readingTime : 4
     import BannerImage from "$lib/assets/content/demo/demo.png"
 </script>
 
-<Heading heading={postTitle} date={datePublished} time={readingTime} latest={lastUpdated} />
+<Heading heading={postTitle} date={datePublished} time={readingTime} latest={lastUpdated} tags={tags} />
 
 
 <TopImage image={BannerImage} imageAlt={featuredImageAlt} />

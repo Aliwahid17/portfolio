@@ -5,11 +5,16 @@
   export let date: string;
   export let time: string;
   export let latest: string;
+  export let tags: string;
 </script>
 
 <!-- <header class="my-5  md:mx-14 lg:mx-[372px] "> -->
-<header class="my-5 ">
-  <h1 class="font-semibold text-3xl first:capitalize flex justify-center items-center text-center ">{heading}</h1>
+<header class="my-3 ">
+  <h1
+    class="font-semibold text-3xl first:capitalize flex justify-center items-center text-center "
+  >
+    {heading}
+  </h1>
 
   <p class="my-2 flex justify-center items-center   ">
     Published on <time datetime={date}>&nbsp;{dateFormat(date)}</time
@@ -18,9 +23,22 @@
 
   {#if latest}
     <p class="my-2 flex justify-center items-center  ">
-      Recently Updated on <time datetime={latest}>&nbsp;{dateFormat(latest)}</time>
+      Recently Updated on <time datetime={latest}
+        >&nbsp;{dateFormat(latest)}</time
+      >
     </p>
   {/if}
+
+  <div class=" flex  flex-wrap justify-center items-center gap-1  ">
+    {#each tags.split(",") as tag}
+      <a
+        href="/tags"
+        class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-sm font-semibold  bg-cyan-700 text-white"
+      >
+        {`#${tag}`}
+      </a>
+    {/each}
+  </div>
 </header>
 
 <!-- <header class="my-5 mx-3 md:mx-10 lg:mx-96 ">
@@ -37,5 +55,3 @@
     </p>
   {/if}
 </header> -->
-
-
