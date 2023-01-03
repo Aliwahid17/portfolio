@@ -7,6 +7,7 @@ datePublished: 2022-12-07T17:02:09.467Z
 lastUpdated: 2023-12-07T17:02:09.467Z
 seoMetaDescription: Best medium format camera for starting out is probably a question at the front of your mind right now! Lets take a look.
 
+# featuredImage: car.webp
 featuredImage: demo.webp
 featuredImageAlt: Photograph of a Hasselblad medium format camera with the focusing screen exposed
 
@@ -25,7 +26,7 @@ readingTime : 4
     import Heading from "$lib/components/content/Heading.svelte"
     import SubHeading from "$lib/components/content/SubHeading.svelte"
     import Link from "$lib/components/content/Link.svelte"
-    import BannerImage from "$lib/assets/content/demo/demo.webp"
+    import BannerImage from "$lib/assets/content/demo/car.webp"
 </script>
 
 <Heading heading={postTitle} date={datePublished} time={readingTime} latest={lastUpdated} tags={tags} />

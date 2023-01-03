@@ -3,13 +3,7 @@
   import { tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
   export let posts: Blog[];
-  export let parseTag: string[][] ;
-  function getImageUrl(name: string) {
-    return new URL(
-      `../assets/content/${name.slice(0, -5)}/${name}`,
-      import.meta.url
-    ).href;
-  }
+  export let parseTag: string[][];
 </script>
 
 <div
@@ -21,7 +15,9 @@
     >
       <div class="rounded-[10px]   bg-gray-900 p-2 ">
         <img
-          src={getImageUrl(post.featuredImage)}
+          src={`src/lib/assets/content/${post.featuredImage.slice(0, -5)}/${
+            post.featuredImage
+          }`}
           alt={post.featuredImageAlt}
           class=" rounded-xl mb-3 "
           loading="lazy"

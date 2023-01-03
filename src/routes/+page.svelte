@@ -24,7 +24,6 @@
     }
   }
 
-  console.log(process.env.NODE_ENV)
 </script>
 
 <main class="mx-2">
