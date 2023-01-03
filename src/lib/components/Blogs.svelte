@@ -28,7 +28,7 @@
 
 
 
-  // console.log(parseURL(getImageUrl(posts[0].featuredImage)).href)
+  console.log(parseURL(getImageUrl(posts[0].featuredImage)).href)
 </script>
 
 <div
