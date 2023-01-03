@@ -4,31 +4,6 @@
   import type { Blog } from "src/app";
   export let posts: Blog[];
   export let parseTag: string[][];
-
-  function getImageUrl(name: string) {
-    return new URL(
-      `../assets/content/${name.slice(0, -5)}/${name}`,
-      import.meta.url
-    ).href;
-  }
-
-  export function parseURL(rawURL: string) {
-    return new URL(rawURL.replace(/#/g, "%23"), "file://");
-  }
-
-  export function extractEntries(searchParams: URLSearchParams) {
-    const entries: Array<[string, string[]]> = [];
-
-    for (const [key, value] of searchParams) {
-      entries.push([key, value.split(";")]);
-    }
-
-    return entries;
-  }
-
-
-
-  console.log(parseURL(getImageUrl(posts[0].featuredImage)).href)
 </script>
 
 <div
@@ -38,15 +13,14 @@
     <article
       class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
     >
-      <!-- src={`./assets/content/${post.featuredImage.slice(0, -5)}/${
-            post.featuredImage
-          }`} -->
       <div class="rounded-[10px]   bg-gray-900 p-2 ">
         <img
-          src={parseURL(getImageUrl(post.featuredImage)).href}
+          src={`assets/demo/${post.featuredImage}`}
           alt={post.featuredImageAlt}
           class=" rounded-xl mb-3 "
           loading="lazy"
+          width="320"
+          height="240"
         />
         <time
           datetime={post.datePublished}
