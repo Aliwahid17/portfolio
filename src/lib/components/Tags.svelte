@@ -1,6 +1,5 @@
 <script lang="ts">
-  export let tags: unknown[];
-  export let url : string;
+  export let tags: string[];
 
   const color = [
     "bg-red-700",
@@ -21,14 +20,15 @@
 >
   {#each tags as tag}
     <a
-      href={`${url}${tag}`}
-      class={`whitespace-nowrap rounded-full first-letter:capitalize  px-2.5 py-0.5 text-2xl font-semibold  ${color[Math.floor(Math.random() * 10)]} text-white`}
+      href={`/tags/${tag}`}
+      class={`whitespace-nowrap rounded-full first-letter:capitalize  px-2.5 py-0.5 text-2xl font-semibold  ${
+        color[Math.floor(Math.random() * 10)]
+      } text-white`}
       data-sveltekit-preload-data="hover"
-      >
+    >
       <span>
         {`#${tag}`}
       </span>
     </a>
-    {/each}
-  </div>
-  
+  {/each}
+</div>

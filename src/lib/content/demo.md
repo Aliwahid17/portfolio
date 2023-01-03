@@ -15,7 +15,7 @@ featuredImageAlt: Photograph of a Hasselblad medium format camera with the focus
 # twitterImage: best-medium-format-camera-for-starting-out-twitter.jpg
 
 categories:  dev
-tags: tech,game
+tags: tech,game,nextjs,cypress ,jest ,firebase ,reactjs ,angular ,nuxtjs
 readingTime : 4
 
 ---

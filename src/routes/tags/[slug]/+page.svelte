@@ -2,22 +2,13 @@
   import Blogs from "$lib/components/Blogs.svelte";
   import Tags from "$lib/components/Tags.svelte";
   import { tag } from "$lib/tag";
-  import type { PageData } from "./$types";
-
-  export let data: PageData;
-  const { parseTag, posts } = data.contents;
-
-  const content: any = [];
-  const contentTag: any[] = [];
-  for (let index = 0; index < posts.length; index++) {
-    if (posts[index].tags.includes(data.slug)) {
-      contentTag.push(parseTag[index]);
-      content.push(posts[index]);
-    }
-  }
-  
-  
-
+  import type { Blog } from "src/app";
+  export let data: {
+    contents: { parseTag: string[][] };
+    slug: string;
+    blogsTag: string[][];
+    blogs: Blog[];
+  };
 </script>
 
 <section class="  text-white my-8 ">
@@ -27,6 +18,7 @@
       {data.slug}
     </p>
   </h2>
-  <Tags tags={tag(data.contents.parseTag)} url="" />
+  <Tags tags={tag(data.contents.parseTag)} />
 </section>
-<Blogs parseTag={contentTag} posts={content} />
+
+<Blogs parseTag={data.blogsTag} posts={data.blogs} />

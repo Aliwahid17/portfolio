@@ -1,14 +1,11 @@
+import type { Blog } from 'src/app';
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ params }) => {
 
     const { slug } = params;
-
-    // const postPromie = import(`../../content/${slug}.md`)
-    // const pagePromise = import(`../../content/${slug}.md`)
     const postPromie = import(`../../../lib/content/${slug}.md`)
     const pagePromise = import(`../../../lib/content/${slug}.md`)
-
 
     const [postResult, pageResult] = await Promise.all([
         postPromie,
@@ -36,7 +33,7 @@ export const load: PageLoad = async ({ params }) => {
         categories,
         tags,
         readingTime
-    } = metadata;
+    } = metadata as Blog;
 
     return {
         post: {

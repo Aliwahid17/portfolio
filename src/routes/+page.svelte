@@ -2,21 +2,31 @@
   import Blogs from "$lib/components/Blogs.svelte";
   import Intro from "$lib/components/Intro.svelte";
   import Projects from "$lib/components/Projects.svelte";
+  import type { Blog, Github } from "src/app";
   import type { PageData } from "./$types";
   export let data: PageData;
+
   const { projects, contents } = data;
   const { posts, parseTag } = contents;
-  const homeContent: any = [];
-  const projectContent: any = [];
-  for (let index = 0; index < 4; index++) {
+
+  const homeContent: Blog[] = [];
+  const projectContent: Github[] = [];
+
+  for (let index = 0; index < 1; index++) {
     homeContent.push(posts[index]);
-    projectContent.push(projects[index]);
+    // if (typeof projects !== 'undefined') {
+    //   projectContent.push(projects[index]);
+    // }
+  }
+  for (let index = 0; index < 4; index++) {
+    if (typeof projects !== "undefined") {
+      projectContent.push(projects[index]);
+    }
   }
 </script>
 
-<main>
+<main class="mx-2">
   <Intro />
-
   <section class="bg-[#181818] my-11  text-white  ">
     <h2
       class=" text-2xl font-semibold flex justify-center items-center py-11  "
@@ -52,7 +62,7 @@
       <h2
         class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 "
       >
-        Check out some of the stuff I've built<span class="animate-bounce"
+        Check out some of the stuff I've built & Collaborate <span class="animate-bounce"
           >👇</span
         >
       </h2>
@@ -61,7 +71,7 @@
 
       <div class="flex justify-center items-center  py-10 ">
         <a
-        data-sveltekit-preload-data="hover"
+          data-sveltekit-preload-data="hover"
           href="/projects"
           class="relative  inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-gray-800 rounded-md group"
         >

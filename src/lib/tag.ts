@@ -1,5 +1,5 @@
-export const tag = (data: any[]) => {
-    let result = new Set();
+export const tag = (data: string[][])  => {
+    let result = new Set<string>();
 
     for (let index = 0; index < data.length; index++) {
         for (

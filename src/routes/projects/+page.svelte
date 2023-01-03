@@ -1,9 +1,7 @@
 <script lang="ts">
   import Projects from "$lib/components/Projects.svelte";
-  import type { PageData } from "./$types";
-  export let data : PageData
-//   const { contents } = data;
-// console.log(data)
+  import type { Github } from "src/app";
+  export let data: { projects: Github[] };
 </script>
 
 <section class="  text-white my-8 ">

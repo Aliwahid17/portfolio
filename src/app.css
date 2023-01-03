@@ -5,10 +5,6 @@
 
 @layer utilities {
 
-    *{
-        padding: 0px;
-        margin: 0px;
-    }
 
     ::-webkit-scrollbar {
         width: 7px;
@@ -38,13 +34,9 @@
 
     .wave {
         animation-name: wave-animation;
-        /* Refers to the name of your @keyframes element below */
         animation-duration: 2.5s;
-        /* Change to speed up or slow down */
         animation-iteration-count: infinite;
-        /* Never stop waving :) */
         transform-origin: 70% 70%;
-        /* Pivot around the bottom-left palm */
         display: inline-block;
     }
 
@@ -57,7 +49,6 @@
             transform: rotate(14.0deg)
         }
 
-        /* The following five values can be played with to make the waving more or less extreme */
         20% {
             transform: rotate(-8.0deg)
         }
@@ -78,12 +69,9 @@
             transform: rotate(0.0deg)
         }
 
-        /* Reset for the last half to pause */
         100% {
             transform: rotate(0.0deg)
         }
     }
-
-
 
 }

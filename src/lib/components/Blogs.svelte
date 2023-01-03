@@ -1,8 +1,9 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
   import { tagIndex } from "$lib/tagIndex";
-  export let posts: any;
-  export let parseTag: string[];
+  import type { Blog } from "src/app";
+  export let posts: Blog[];
+  export let parseTag: string[][] ;
   function getImageUrl(name: string) {
     return new URL(
       `../assets/content/${name.slice(0, -4)}/${name}`,
@@ -11,7 +12,9 @@
   }
 </script>
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8 text-white ">
+<div
+  class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mx-8 text-white "
+>
   {#each posts as post}
     <article
       class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
@@ -43,7 +46,7 @@
         <div class="mt-4 mb-2 flex flex-wrap gap-1 px-2 ">
           {#each parseTag[tagIndex(posts, post.postTitle)] as tag}
             <a
-              href="/tags"
+              href={`/tags/${tag}`}
               class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 text-white"
             >
               {`#${tag}`}
