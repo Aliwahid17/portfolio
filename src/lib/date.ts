@@ -1,5 +1,5 @@
-export const dateFormat = (date: string) => {
-    const MONTH_NAME = [
+export const dateFormat = (date: string | undefined) => {
+    const monthName = [
         'Jan',
         'Feb',
         'Mar',
@@ -13,10 +13,12 @@ export const dateFormat = (date: string) => {
         'Nov',
         'Dec',
     ]
-    
-    const wholeDate = date.split("T")[0]
-    const wholeDateArray: any = wholeDate.split("-")
-    const publishDate: string = `${MONTH_NAME[wholeDateArray[1] - 1]} ${wholeDateArray[2]}, ${wholeDateArray[0]} `
-    return publishDate
 
+    if (typeof date !== 'undefined') {
+        const wholeDate = date.split("T")[0]
+        const wholeDateArray = wholeDate.split("-")
+        const publishDate = `${monthName[+wholeDateArray[1] - 1]} ${wholeDateArray[2]}, ${wholeDateArray[0]}`
+        return publishDate
+
+    }
 }

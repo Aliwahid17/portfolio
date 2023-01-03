@@ -19,8 +19,9 @@
     </a>
 
     <button
-      class="  md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none bg-[#1e1f1f]"
+      class=" md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none bg-[#1e1f1f]"
       on:click={() => (nav = !nav)}
+      title="menu"
     >
       <div
         class="block w-5 absolute left-1/2 top-1/2   transform  -translate-x-1/2 -translate-y-1/2"
@@ -70,17 +71,16 @@
             <img
               src={Blog}
               alt="Blogs"
-              width="40px"
-              height="40px"
-              class="flex justify-center items-center group-hover:wave "
+              class="flex justify-center items-center group-hover:wave w-10 h-10 "
               loading="lazy"
+              title="Blogs"
             />
           </a>
         </li>
 
         <li>
           <a
-            href="/"
+            href="/projects"
             class="flex lg:justify-center justify-between items-center group"
             on:click={() => (nav = !nav)}
             data-sveltekit-preload-data="hover"
@@ -93,10 +93,9 @@
             <img
               src={Project}
               alt="Projects"
-              width="40px"
-              height="40px"
-              class="flex justify-center items-center group-hover:wave  "
+              class="flex justify-center items-center group-hover:wave  w-10 h-10 "
               loading="lazy"
+              title="Projects"
             />
           </a>
         </li>
@@ -116,10 +115,9 @@
             <img
               src={About}
               alt="About"
-              width="40px"
-              height="40px"
-              class="flex justify-center items-center group-hover:wave "
+              class="flex justify-center items-center group-hover:wave w-10 h-10 "
               loading="lazy"
+              title="About"
             />
           </a>
         </li>

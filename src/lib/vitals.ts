@@ -3,7 +3,7 @@ import type { Metric } from 'web-vitals'
 
 const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals';
 
-function getConnectionSpeed(): any {
+function getConnectionSpeed():any {
     //@ts-ignore
     return 'connection' in navigator && navigator['connection'] && 'effectiveType' in navigator['connection'] ? navigator['connection']['effectiveType'] : '';
 }
@@ -50,7 +50,7 @@ function sendToAnalytics(metric: Metric, options: { params: { [s: string]: any; 
 /**
  * @param {any} options
  */
-export function webVitals(options: any) {
+export function webVitals(options:any) {
     try {
         onFID((metric) => sendToAnalytics(metric, options));
         onTTFB((metric) => sendToAnalytics(metric, options));

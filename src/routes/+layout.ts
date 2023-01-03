@@ -1,12 +1,9 @@
-import { sortContent } from "$lib/content"
+import { content } from "$lib/content"
+import { project } from "$lib/project"
 import type { PageLoad } from "./$types"
 
 export const load: PageLoad = async () => {
-    const posts = await sortContent()
-
-    const parseTag = posts.map((value: any) => {
-        return value.tags.split(',')
-    })
-
-    return { posts, parseTag }
+    const contents = await content()
+    const projects = await project()
+    return { contents , projects }
 }

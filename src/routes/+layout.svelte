@@ -7,6 +7,8 @@
   import { browser } from "$app/environment";
   import { page } from "$app/stores";
   import type { PageData } from "./$types";
+
+  export let data: PageData;
   let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
 
   $: if (browser && analyticsId) {
@@ -17,8 +19,6 @@
     });
   }
   inject();
-
-  export let data: PageData;
 </script>
 
 <Navbar />
