@@ -6,7 +6,7 @@
   export let parseTag: string[][] ;
   function getImageUrl(name: string) {
     return new URL(
-      `../assets/content/${name.slice(0, -4)}/${name}`,
+      `../assets/content/${name.slice(0, -5)}/${name}`,
       import.meta.url
     ).href;
   }

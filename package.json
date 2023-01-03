@@ -16,6 +16,8 @@
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.13",
+		"cssnano": "^5.1.14",
+		"cssnano-preset-advanced": "^5.3.9",
 		"eslint": "^8.28.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"mdsvex": "^0.10.6",

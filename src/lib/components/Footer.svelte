@@ -2,7 +2,7 @@
   import Social from "./Social.svelte";
 </script>
 
-<footer class="text-white  mx-10 md:mx-40 lg:mx-72 xl:mx-96 ">
+<footer class="text-white my-10 mx-10 md:mx-40 lg:mx-72 xl:mx-96 ">
   <article>
     <p class=" text-xl  text-center ">
       I'm a freelance Full Stack Web Developer who enjoys learning <span
@@ -24,7 +24,7 @@
     </a>
   </span>
 
-  <p class="flex justify-evenly items-center text-lg my-5 ">
+  <p class="flex justify-evenly items-center text-lg my-5  ">
     <a
       href="/"
       class="text-base font-semibold hover:underline hover:text-cyan-400"

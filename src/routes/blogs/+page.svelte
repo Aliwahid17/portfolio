@@ -1,6 +1,5 @@
 <script lang="ts">
   import Blogs from "$lib/components/Blogs.svelte";
-  import type { Blog } from "src/app";
   import type { PageData } from "./$types";
   export let data: PageData;
   const { posts, parseTag } = data.contents;
