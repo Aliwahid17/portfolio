@@ -4,6 +4,14 @@
   import type { Blog } from "src/app";
   export let posts: Blog[];
   export let parseTag: string[][];
+
+  import imageURL from "$lib/imageURL";
+
+  const url = (name: string) => {
+    const title = name.replaceAll(" ", "-");
+    return Object(imageURL)[title];
+  };
+
 </script>
 
 <div
@@ -14,14 +22,18 @@
       class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
     >
       <div class="rounded-[10px]   bg-gray-900 p-2 ">
-        <img
-          src={`assets/demo/${post.featuredImage}`}
-          alt={post.featuredImageAlt}
-          class=" rounded-xl mb-3 "
-          loading="lazy"
-          width="320"
-          height="240"
-        />
+        <!-- src={Test} -->
+        <picture>
+          <img
+            src={url(post.postTitle)}
+            alt={post.featuredImageAlt}
+            class=" rounded-xl mb-3 h-full w-full "
+            loading="lazy"
+            width="320"
+            height="240"
+          />
+        </picture>
+
         <time
           datetime={post.datePublished}
           class="block text-xs text-gray-400 px-2 "
