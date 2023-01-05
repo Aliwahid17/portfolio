@@ -7,7 +7,7 @@ export const tag = (data: string[][])  => {
             position < data[index].length;
             position++
         ) {
-            result.add(data[index][position]);
+            result.add(data[index][position].trim());
         }
     }
     return [...result]

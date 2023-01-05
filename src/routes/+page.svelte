@@ -1,29 +1,42 @@
-<script async lang="ts">
+<script lang="ts">
   import Blogs from "$lib/components/Blogs.svelte";
   import Intro from "$lib/components/Intro.svelte";
   import Projects from "$lib/components/Projects.svelte";
-  import type { Blog, Github } from "src/app";
+  import FeaturedImageSrc from "$lib/assets/home.webp";
   import type { PageData } from "./$types";
+  import { blogs } from "$lib/store";
+
   export let data: PageData;
 
-  const { projects, contents } = data;
-  const { posts, parseTag } = contents;
+  const featuredImage = {
+    url: FeaturedImageSrc,
+    alt: "If at first, you don't succeed you must be programmer.",
+    width: 672,
+    height: 448,
+    caption: "Home Page",
+  };
 
-  const homeContent: Blog[] = [];
-  const projectContent: Github[] = [];
-
-  for (let index = 0; index < 1; index++) {
-    homeContent.push(posts[index]);
-    // if (typeof projects !== 'undefined') {
-    //   projectContent.push(projects[index]);
-    // }
-  }
-  for (let index = 0; index < 4; index++) {
-    if (typeof projects !== "undefined") {
-      projectContent.push(projects[index]);
-    }
-  }
-
+  const seoProps = {
+    title: "Wahid Ali - Home",
+    slug: "",
+    entityMeta: {
+      url: "https://wahidali.com",
+      faviconWidth: 512,
+      faviconHeight: 512,
+      caption: "Wahid Ali",
+    },
+    // dataPublished :
+    // lastUpdated :
+    breadcrumbs: [
+      {
+        name: "Home",
+        slug: "",
+      },
+    ],
+    metadescription:
+      "i-m-a-self-taught-full-stack-developer-with-good-knowledge-and-experience-with-the-latest-web-technologies-my-main-goal-is-to-work-with-talented-people-through-my-work-and-technical-content",
+    featuredImage,
+  };
 </script>
 
 <main class="mx-2">
@@ -35,7 +48,7 @@
       Recommended Reading <span class="wave">📖</span>
     </h2>
 
-    <Blogs posts={homeContent} {parseTag} />
+    <Blogs posts={data.recentBlogs} parseTag={$blogs.parseTag} />
 
     <div class="flex justify-center items-center  py-10 ">
       <a
@@ -63,12 +76,12 @@
       <h2
         class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 "
       >
-        Check out some of the stuff I've built & Collaborate <span class="animate-bounce"
-          >👇</span
+        Check out some of the stuff I've built & Collaborate <span
+          class="animate-bounce">👇</span
         >
       </h2>
 
-      <Projects value={projectContent} />
+      <Projects value={data.recentProjects} />
 
       <div class="flex justify-center items-center  py-10 ">
         <a

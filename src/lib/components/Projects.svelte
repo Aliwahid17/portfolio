@@ -37,10 +37,10 @@
         </p>
 
         <div
-          class="mt-4 mb-2 flex flex-wrap gap-1 px-2 justify-between items-center "
+          class="mt-4 mb-2 flex flex-wrap gap-1 px-2 justify-between items-center text-white "
         >
           <span
-            class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 text-white"
+            class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 "
           >
             {content.language}
           </span>

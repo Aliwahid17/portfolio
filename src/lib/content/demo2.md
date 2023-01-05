@@ -3,7 +3,7 @@
 author : Wahid Ali
 postTitle: Best Medium Format Camera for Starting Out2 
 focusKeyphrase: best medium format camera
-datePublished: 2022-12-07T17:02:09.467Z
+datePublished: 2022-12-09T17:02:09.467Z
 lastUpdated: 2023-12-07T17:02:09.467Z
 seoMetaDescription: Best medium format camera for starting out is probably a question at the front of your mind right now! Lets take a look.
 
@@ -16,7 +16,7 @@ featuredImageAlt: Photograph of a Hasselblad medium format camera with the focus
 # twitterImage: best-medium-format-camera-for-starting-out-twitter.jpg
 
 categories:  dev
-tags: tech,game,nextjs,cypress ,jest ,firebase ,reactjs ,angular ,nuxtjs
+tags: tech,game,nextjs,cypress,firebase,reactjs,angular,nuxtjs
 readingTime : 4
 
 ---

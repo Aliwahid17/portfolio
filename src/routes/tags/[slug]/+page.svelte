@@ -4,10 +4,9 @@
   import { tag } from "$lib/tag";
   import type { Blog } from "src/app";
   export let data: {
-    contents: { parseTag: string[][] };
-    slug: string;
-    blogsTag: string[][];
     blogs: Blog[];
+    blogsTag: string[][];
+    slug: string;
   };
 </script>
 
@@ -18,7 +17,7 @@
       {data.slug}
     </p>
   </h2>
-  <Tags tags={tag(data.contents.parseTag)} />
+  <Tags tags={tag(data.blogsTag)} />
 </section>
 
 <Blogs parseTag={data.blogsTag} posts={data.blogs} />

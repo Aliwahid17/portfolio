@@ -32,7 +32,7 @@
   <div class=" flex  flex-wrap justify-center items-center gap-1  ">
     {#each tags.split(",") as tag}
       <a
-        href="/tags"
+        href={`/tags/${tag}`}
         class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-sm font-semibold  bg-cyan-700 text-white"
       >
         {`#${tag}`}

@@ -7,7 +7,7 @@ export const handle: Handle = async ({ event, resolve }:any)=> {
 
     const response = await resolve(event);
 
-    if (!cookies['userid']) {
+    if (!cookies['userid'] ) {
         response.headers.set(
             'set-cookie',
             cookie.serialize('userid', event.locals.userid, {

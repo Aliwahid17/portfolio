@@ -21,11 +21,11 @@
     </h2>
 
     <div class="flex justify-evenly ">
-      <img src={Rust} alt="rust" class="  rust w-11 h-11 " />
-      <img src={Python} alt="python" class="  pythonw-11 h-11 " />
-      <img src={Typescript} alt="typescript" class=" typescript w-11 h-11 " />
-      <img src={C} alt="c" class=" c w-11 h-11 " />
-      <img src={Cplus} alt="cplus" class=" cplus w-11 h-11 " />
+      <img src={Rust} title="Rust" alt="rust" class="  rust w-11 h-11 "  width="44" height="44"/>
+      <img src={Python} title="Python" alt="python" class="  pythonw-11 h-11 " width="44" height="44" />
+      <img src={Typescript} title="Typescript" alt="typescript" class=" typescript w-11 h-11 " width="44" height="44" />
+      <img src={C} title="C" alt="C" class=" c w-11 h-11 " width="44" height="44" />
+      <img src={Cplus} title="C++" alt="C++" class=" cplus w-11 h-11 " width="44" height="44" />
     </div>
   </section>
 </section>
@@ -37,14 +37,14 @@
     </h2>
 
     <div class="flex justify-evenly ">
-      <img src={React} alt="react" class="  reactw-11 h-11 " />
-      <img src={Django} alt="django" class="  django w-11 h-11 " />
-      <img src={Nextjs} alt="next-js" class=" next-js w-11 h-11 " />
-      <img src={Sveltekit} alt="sveltekit" class=" sveltekit w-11 h-11 " />
+      <img src={React} title="React" alt="React" class="  reactw-11 h-11 "  width="44" height="44" />
+      <img src={Django} title="Django" alt="Django" class="  django w-11 h-11 " width="44" height="44" />
+      <img src={Nextjs} title="Nextjs" alt="Nextjs" class=" next-js w-11 h-11 "  width="44" height="44"/>
+      <img src={Sveltekit} title="Sveltekit" alt="Sveltekit" class=" sveltekit w-11 h-11 " width="44" height="44" />
       <img
-        src={TailwindCss}
+        src={TailwindCss} title="TailwindCss"
         alt="tailwind-css"
-        class=" tailwind-css w-11 h-11 "
+        class=" tailwind-css w-11 h-11 " width="44" height="44"
       />
     </div>
   </section>

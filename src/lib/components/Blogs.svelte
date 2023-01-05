@@ -2,16 +2,14 @@
   import { dateFormat } from "$lib/date";
   import { tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
+  import imageURL from "$lib/imageURL";
   export let posts: Blog[];
   export let parseTag: string[][];
-
-  import imageURL from "$lib/imageURL";
 
   const url = (name: string) => {
     const title = name.replaceAll(" ", "-");
     return Object(imageURL)[title];
   };
-
 </script>
 
 <div
@@ -55,7 +53,7 @@
           {#each parseTag[tagIndex(posts, post.postTitle)] as tag}
             <a
               href={`/tags/${tag}`}
-              class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 text-white"
+              class="whitespace-nowrap first-letter:capitalize rounded-full px-2.5 py-0.5  text-xm font-semibold  bg-cyan-700 text-white"
             >
               {`#${tag}`}
             </a>
