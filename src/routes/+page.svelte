@@ -3,10 +3,7 @@
   import Intro from "$lib/components/Intro.svelte";
   import Projects from "$lib/components/Projects.svelte";
   import FeaturedImageSrc from "$lib/assets/home.webp";
-  import type { PageData } from "./$types";
-  import { blogs } from "$lib/store";
-
-  export let data: PageData;
+  import { recentItems } from "$lib/store";
 
   const featuredImage = {
     url: FeaturedImageSrc,
@@ -48,7 +45,12 @@
       Recommended Reading <span class="wave">📖</span>
     </h2>
 
-    <Blogs posts={data.recentBlogs} parseTag={$blogs.parseTag} />
+    {#if typeof $recentItems.recentBlogs[0] !== "undefined"}
+      <Blogs
+        posts={$recentItems.recentBlogs}
+        parseTag={$recentItems.blogsTag}
+      />
+    {/if}
 
     <div class="flex justify-center items-center  py-10 ">
       <a
@@ -81,7 +83,7 @@
         >
       </h2>
 
-      <Projects value={data.recentProjects} />
+      <Projects value={$recentItems.recentProjects} />
 
       <div class="flex justify-center items-center  py-10 ">
         <a
