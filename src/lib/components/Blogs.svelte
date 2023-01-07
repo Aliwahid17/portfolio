@@ -34,7 +34,7 @@
 
         <time
           datetime={post.datePublished}
-          class="block text-xs text-gray-400 px-2 "
+          class="block text-xs text-grey-500 px-2 "
         >
           {dateFormat(post.datePublished)}
         </time>

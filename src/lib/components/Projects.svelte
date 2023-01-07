@@ -13,7 +13,7 @@
         <div class="flex justify-between items-center ">
           <time
             datetime={content.created_at}
-            class="block text-xs text-gray-400 px-2 "
+            class="block text-xs text-grey-500 px-2 "
           >
             {dateFormat(content.created_at)}
           </time>
@@ -40,7 +40,7 @@
           class="mt-4 mb-2 flex flex-wrap gap-1 px-2 justify-between items-center text-white "
         >
           <span
-            class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 "
+            class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold text-white  bg-cyan-800 "
           >
             {content.language}
           </span>
