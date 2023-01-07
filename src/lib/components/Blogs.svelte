@@ -20,12 +20,12 @@
       class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
     >
       <div class="rounded-[10px]   bg-gray-900 p-2 ">
-        <!-- src={Test} -->
+  
         <picture>
           <img
             src={url(post.postTitle)}
             alt={post.featuredImageAlt}
-            class=" rounded-xl mb-3 h-full w-full "
+            class=" rounded-xl mb-3 object-fill w-full h-full "
             loading="lazy"
             width="320"
             height="240"
