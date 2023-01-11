@@ -25,7 +25,7 @@ export interface Blog {
 }
 
 export interface Github {
-	[x : string],
+	[x: string],
 	id: number;
 	node_id: string;
 	name: string;
@@ -172,4 +172,3 @@ export enum Type {
 export enum Visibility {
 	Public = "public",
 }
-

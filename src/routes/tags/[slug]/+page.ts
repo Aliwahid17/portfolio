@@ -3,7 +3,7 @@ import type { PageLoad } from './$types';
 import { blogs } from "$lib/store";
 import { tag } from '$lib/tag';
 
-
+export const csr = false
 export const load: PageLoad = async ({ params }) => {
 
     const blog: Blog[] = []

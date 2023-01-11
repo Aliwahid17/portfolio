@@ -16,8 +16,8 @@
     {heading}
   </h1>
 
-  <p class="my-2 flex justify-center items-center   ">
-    Published on <time datetime={date}>&nbsp;{dateFormat(date)}</time
+  <p class="my-2 flex justify-center items-center whitespace-nowrap  ">
+    Published on <time datetime={date} >&nbsp;{dateFormat(date)}</time
     >&nbsp;—&nbsp;{time} minutes read
   </p>
 

@@ -1,8 +1,18 @@
 <script lang="ts">
+  import { url } from "$lib/imageURL";
   import type { PageData } from "./$types";
+  import SEO from "$lib/components/SEO/index.svelte";
   export let data: PageData;
-  const { page } = data;
+  const { page, post, slug } = data;
+
+  const seoProps = {
+    title: `Wahid Ali - ${post?.postTitle}`,
+    metadescription:post?.seoMetaDescription,
+    slug: slug,
+  };
 </script>
+
+<SEO values={seoProps} />
 
 <main class="text-white text-md">
   <div class="m-3 text-lg">

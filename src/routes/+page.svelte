@@ -2,45 +2,27 @@
   import Blogs from "$lib/components/Blogs.svelte";
   import Intro from "$lib/components/Intro.svelte";
   import Projects from "$lib/components/Projects.svelte";
-  import FeaturedImageSrc from "$lib/assets/home.webp";
   import { recentItems } from "$lib/store";
+  import SEO from '$lib/components/SEO/index.svelte'
 
-  const featuredImage = {
-    url: FeaturedImageSrc,
-    alt: "If at first, you don't succeed you must be programmer.",
-    width: 672,
-    height: 448,
-    caption: "Home Page",
-  };
 
-  const seoProps = {
-    title: "Wahid Ali - Home",
-    slug: "",
-    entityMeta: {
-      url: "https://wahidali.com",
-      faviconWidth: 512,
-      faviconHeight: 512,
-      caption: "Wahid Ali",
-    },
-    // dataPublished :
-    // lastUpdated :
-    breadcrumbs: [
-      {
-        name: "Home",
-        slug: "",
-      },
-    ],
-    metadescription:
-      "i-m-a-self-taught-full-stack-developer-with-good-knowledge-and-experience-with-the-latest-web-technologies-my-main-goal-is-to-work-with-talented-people-through-my-work-and-technical-content",
-    featuredImage,
-  };
+  const seoProps  = {
+    title : "Wahid Ali - Home",
+    metadescription:"I'm a self taught full stack developer with good knowledge and experience with the latest web technologies my main goal is to work with talented people through my work and technical content",
+    slug : '',
+  }
+
 </script>
+
+
+
+<SEO values={seoProps} />
 
 <main class="mx-2">
   <Intro />
-  <section class="bg-[#181818] my-11  text-white  ">
+  <section class="bg-[#181818] my-11   text-white  ">
     <h2
-      class=" text-2xl font-semibold flex justify-center items-center py-11  "
+      class=" text-2xl font-semibold flex justify-center items-center py-12  "
     >
       Recommended Reading <span class="wave">📖</span>
     </h2>
@@ -78,7 +60,7 @@
       <h2
         class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 "
       >
-        Check out some of the stuff I've built & Collaborate <span
+        Check out the stuff I've built & Collab <span
           class="animate-bounce">👇</span
         >
       </h2>

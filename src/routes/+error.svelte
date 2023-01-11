@@ -1,6 +1,12 @@
 <script lang="ts">
   import Error from "$lib/assets/not.webp";
+  import { page } from "$app/stores";
+  const title = `Wahid Ali - ${$page.status}: ${$page.error?.message}`;
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
 
 <div class="bg-indigo-900 relative overflow-hidden h-screen z-0 ">
   <img

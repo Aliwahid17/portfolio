@@ -2,14 +2,14 @@
   import { dateFormat } from "$lib/date";
   import { tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
-  import imageURL from "$lib/imageURL";
+  import imageURL, { url } from "$lib/imageURL";
   export let posts: Blog[];
   export let parseTag: string[][];
 
-  const url = (name: string) => {
-    const title = name.replaceAll(" ", "-");
-    return Object(imageURL)[title];
-  };
+  // const url = (name: string) => {
+  //   const title = name.replaceAll(" ", "-");
+  //   return Object(imageURL)[title];
+  // };
 </script>
 
 <div

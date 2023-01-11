@@ -7,3 +7,8 @@ const ImageURL  = {
 }  
 
 export default ImageURL
+
+export const url = (name: string|undefined) => {
+    const title = name?.replaceAll(" ", "-") as string;
+    return Object(ImageURL)[title];
+};

@@ -24,8 +24,8 @@
       class={`whitespace-nowrap rounded-full first-letter:capitalize  px-2.5 py-0.5 text-2xl font-semibold  ${
         color[Math.floor(Math.random() * 10)]
       } text-white`}
-      data-sveltekit-preload-data="hover"
-    >
+      data-sveltekit-reload=''
+      >
       <span>
         {`#${tag}`}
       </span>

@@ -4,25 +4,14 @@
 
 <footer class="text-white my-10 mx-10 md:mx-40 lg:mx-72 xl:mx-96 ">
   <article>
-    <p class=" text-xl  text-center ">
-      I'm a freelance Full Stack Web Developer who enjoys learning <span
-        class="hover:wave">🏫</span
-      >,building <span class="hover:wave">🏗</span>,sharing
-      <span class="hover:wave">👩‍💻</span>
-      and collaborating <span class="hover:wave">🙌</span> software works with other
-      Developers.
-    </p>
+    <p class=" text-xl  text-center ">I'm a freelance Full Stack Web Developer who enjoys learning <span class="hover:wave">🏫</span>,building <span class="hover:wave">🏗</span>,sharing<span class="hover:wave">👩‍💻</span> and collaborating <span class="hover:wave">🙌</span> software works with other Developers.</p>
   </article>
 
   <div class="mb-16">
     <Social />
   </div>
 
-  <span class=" text-lg ">
-    &#169; Copyright 2022 <a href="/" class="font-bold underline mx-1  ">
-      Wahid Ali
-    </a>
-  </span>
+  <span class=" text-lg ">&#169; Copyright 2022 <a href="/" class="font-bold underline mx-1  ">Wahid Ali</a></span>
 
   <p class="flex justify-evenly items-center text-lg my-5  ">
     <a
