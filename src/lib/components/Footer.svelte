@@ -2,7 +2,7 @@
   import Social from "./Social.svelte";
 </script>
 
-<footer class="text-white my-10 mx-10 md:mx-40 lg:mx-72 xl:mx-96 ">
+<footer class="text-white my-10 mx-6 md:mx-32 lg:mx-60 xl:mx-96 ">
   <article>
     <p class=" text-xl  text-center ">I'm a freelance Full Stack Web Developer who enjoys learning <span class="hover:wave">🏫</span>,building <span class="hover:wave">🏗</span>,sharing<span class="hover:wave">👩‍💻</span> and collaborating <span class="hover:wave">🙌</span> software works with other Developers.</p>
   </article>

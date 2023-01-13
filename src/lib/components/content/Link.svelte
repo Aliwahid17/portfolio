@@ -7,9 +7,9 @@
   href={source}
   target="_blank"
   rel="noreferrer"
-  class="text-sm text-cyan-500 font-semibold hover:text-red-500 hover:underline"
+  class="text-xl text-cyan-500 font-semibold hover:text-red-500 hover:underline"
 >
   <span>
-    {title}
+  {title}
   </span>
 </a>

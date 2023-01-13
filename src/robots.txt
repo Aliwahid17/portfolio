@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://portfolio-diqs3d5x1-aliwahid17.vercel.app

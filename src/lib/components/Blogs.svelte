@@ -1,6 +1,6 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
-  import { tagIndex } from "$lib/tagIndex";
+  import { color, tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
   import imageURL, { url } from "$lib/imageURL";
   export let posts: Blog[];
@@ -53,7 +53,7 @@
           {#each parseTag[tagIndex(posts, post.postTitle)] as tag}
             <a
               href={`/tags/${tag}`}
-              class="whitespace-nowrap first-letter:capitalize rounded-full px-2.5 py-0.5  text-xm font-semibold  bg-cyan-700 text-white"
+              class={`whitespace-nowrap first-letter:capitalize rounded-full px-2.5 py-0.5  text-base font-semibold  ${color()}`}
             >
               {`#${tag}`}
             </a>

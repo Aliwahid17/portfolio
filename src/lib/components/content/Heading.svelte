@@ -1,5 +1,6 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
+  import { color } from "$lib/tagIndex";
 
   export let heading: string;
   export let date: string;
@@ -33,7 +34,7 @@
     {#each tags.split(",") as tag}
       <a
         href={`/tags/${tag}`}
-        class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-sm font-semibold  bg-cyan-700 text-white"
+        class={`${color()} whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-base font-semibold  bg-cyan-700 text-white`}
       >
         {`#${tag}`}
       </a>
