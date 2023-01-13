@@ -1,0 +1,16 @@
+{
+    "name" : "Wahid Ali",
+    "short_name":"Wahid Ali",
+    "description":"Awesome Content for FullStack developer",
+    "start_url":".",
+    "display":"standalone",
+    "background_color":"#1e1f1f",
+    "theme_color":"#181818",
+    "icons":[
+        {
+            "src": "/favicon.ico",
+            "sizes":"64x64",
+            "type":"image/ico"
+        }
+    ]
+}

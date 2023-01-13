@@ -16,8 +16,6 @@
     slug: data.slug,
   };
 
-  console.log(data.slug)
-
 </script>
 
 
