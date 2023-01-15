@@ -71,7 +71,7 @@
             <img
               src={Blog}
               alt="Blogs"
-              class="flex justify-center items-center group-hover:wave w-10 h-10 "
+              class="flex justify-center items-center group-hover:wave w-10 h-10 "  width="40" height="40"
               loading="lazy"
               title="Blogs"
             />
@@ -93,7 +93,7 @@
             <img
               src={Project}
               alt="Projects"
-              class="flex justify-center items-center group-hover:wave  w-10 h-10 "
+              class="flex justify-center items-center group-hover:wave  w-10 h-10 " width="40" height="40"
               loading="lazy"
               title="Projects"
             />
@@ -115,7 +115,7 @@
             <img
               src={About}
               alt="About"
-              class="flex justify-center items-center group-hover:wave w-10 h-10 "
+              class="flex justify-center items-center group-hover:wave w-10 h-10 " width="40" height="40"
               loading="lazy"
               title="About"
             />

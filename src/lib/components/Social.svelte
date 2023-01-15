@@ -16,7 +16,7 @@
       alt="github"
       class="w-9 h-9"
       loading="lazy"
-      title="Github"
+      title="Github" width="36" height="36"
     />
   </a>
   <a href="/" target="_blank" class="hover:animate-pulse">
@@ -25,7 +25,7 @@
       alt="instagram"
       class="w-9 h-9"
       loading="lazy"
-      title="Instagram"
+      title="Instagram" width="36" height="36"
     />
   </a>
   <a href="/" target="_blank" class="hover:animate-pulse">
@@ -34,7 +34,7 @@
       alt="twitter"
       class="w-9 h-9"
       loading="lazy"
-      title="Twitter"
+      title="Twitter" width="36" height="36"
     />
   </a>
   <a href="/" target="_blank" class="hover:animate-pulse">
@@ -43,7 +43,7 @@
       alt="linkedin"
       class="w-9 h-9"
       loading="lazy"
-      title="Linkedin"
+      title="Linkedin" width="36" height="36"
     />
   </a>
 </section>

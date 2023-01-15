@@ -1,9 +1,15 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
-  import { tagIndex } from "$lib/tagIndex";
+  import { color, tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
+  import imageURL, { url } from "$lib/imageURL";
   export let posts: Blog[];
   export let parseTag: string[][];
+
+  // const url = (name: string) => {
+  //   const title = name.replaceAll(" ", "-");
+  //   return Object(imageURL)[title];
+  // };
 </script>
 
 <div
@@ -14,17 +20,21 @@
       class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
     >
       <div class="rounded-[10px]   bg-gray-900 p-2 ">
-        <img
-          src={`assets/demo/${post.featuredImage}`}
-          alt={post.featuredImageAlt}
-          class=" rounded-xl mb-3 "
-          loading="lazy"
-          width="320"
-          height="240"
-        />
+  
+        <picture>
+          <img
+            src={url(post.postTitle)}
+            alt={post.featuredImageAlt}
+            class=" rounded-xl mb-3 object-fill w-full h-full "
+            loading="lazy"
+            width="320"
+            height="240"
+          />
+        </picture>
+
         <time
           datetime={post.datePublished}
-          class="block text-xs text-gray-400 px-2 "
+          class="block text-xs text-grey-500 px-2 "
         >
           {dateFormat(post.datePublished)}
         </time>
@@ -43,7 +53,7 @@
           {#each parseTag[tagIndex(posts, post.postTitle)] as tag}
             <a
               href={`/tags/${tag}`}
-              class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 text-white"
+              class={`whitespace-nowrap first-letter:capitalize rounded-full px-2.5 py-0.5  text-base font-semibold  ${color()}`}
             >
               {`#${tag}`}
             </a>

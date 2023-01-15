@@ -1,5 +1,6 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
+  import { color } from "$lib/tagIndex";
 
   export let heading: string;
   export let date: string;
@@ -16,8 +17,8 @@
     {heading}
   </h1>
 
-  <p class="my-2 flex justify-center items-center   ">
-    Published on <time datetime={date}>&nbsp;{dateFormat(date)}</time
+  <p class="my-2 flex justify-center items-center whitespace-nowrap  ">
+    Published on <time datetime={date} >&nbsp;{dateFormat(date)}</time
     >&nbsp;—&nbsp;{time} minutes read
   </p>
 
@@ -32,8 +33,8 @@
   <div class=" flex  flex-wrap justify-center items-center gap-1  ">
     {#each tags.split(",") as tag}
       <a
-        href="/tags"
-        class="whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-sm font-semibold  bg-cyan-700 text-white"
+        href={`/tags/${tag}`}
+        class={`${color()} whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-base font-semibold  bg-cyan-700 text-white`}
       >
         {`#${tag}`}
       </a>

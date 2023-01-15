@@ -1,7 +1,7 @@
 <script lang="ts">
   import { dateFormat } from "$lib/date";
   import type { Github } from "src/app";
-  export let value: Github[];
+  export let value: Github[] = [];
 </script>
 
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mx-8 ">
@@ -13,7 +13,7 @@
         <div class="flex justify-between items-center ">
           <time
             datetime={content.created_at}
-            class="block text-xs text-gray-400 px-2 "
+            class="block text-xs text-grey-500 px-2 "
           >
             {dateFormat(content.created_at)}
           </time>
@@ -37,10 +37,10 @@
         </p>
 
         <div
-          class="mt-4 mb-2 flex flex-wrap gap-1 px-2 justify-between items-center "
+          class="mt-4 mb-2 flex flex-wrap gap-1 px-2 justify-between items-center text-white "
         >
           <span
-            class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold  bg-cyan-700 text-white"
+            class="whitespace-nowrap rounded-full  px-2.5 py-0.5 text-xs font-semibold text-white  bg-cyan-800 "
           >
             {content.language}
           </span>
