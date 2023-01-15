@@ -1,16 +1,18 @@
 import { content } from "$lib/content";
 import { tag } from "$lib/tag";
 
+export const prerender = true
+
 export async function GET() {
 
-    const pagePaths = ['','/about','/blogs','/projects','/tags']
-    const pages = pagePaths.map((element) => `http://localhost:5173${element}`)
+  const pagePaths = ['', '/about', '/blogs', '/projects', '/tags']
+  const pages = pagePaths.map((element) => `http://localhost:5173${element}`)
 
-    const {posts,parseTag} = await content()
-    const tags = tag(parseTag)
+  const { posts, parseTag } = await content()
+  const tags = tag(parseTag)
 
-    return new Response(
-        `
+  return new Response(
+    `
     <?xml version="1.0" encoding="UTF-8" ?>
     <urlset
       xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
@@ -22,27 +24,36 @@ export async function GET() {
     >
       <!-- <url> elements go here -->
 
-      ${pages.map((element) => `<url><loc>${element}</loc><lastmod>${JSON.stringify(new Date().toISOString())}</lastmod></url>`).join('')}
+      ${pages.map((element) => `
+      <url>
+        <loc>${element}</loc>
+        <lastmod>${JSON.stringify(new Date().toISOString())}</lastmod>
+      </url>
+      `).join('')}
 
       ${posts.map((element) => {
-        const {lastUpdated , slug} = element
-        return `
+      const { lastUpdated, slug, datePublished } = element
+      return `
         <url>
             <loc>http://localhost:5173/${slug}</loc>
-            <lastmod>${new Date(lastUpdated).toISOString()}</lastmod>
+            <lastmod>${new Date(lastUpdated.length === 0 ? datePublished : lastUpdated).toISOString()}</lastmod>
         </url>
         `
-      }).join('')}
+    }).join('')}
 
-      ${tags.map((element) => `<url><loc>http://localhost:5173/${element}</loc><lastmod>${JSON.stringify(new Date().toISOString())}</lastmod></url>`).join('')}
+      ${tags.map((element) => `
+      <url>
+        <loc>http://localhost:5173/${element}</loc>
+        <lastmod>${JSON.stringify(new Date().toISOString())}</lastmod>
+      </url>`).join('')}
 
 
     </urlset>`.trim(),
-        {
-            headers: {
-                'Content-Type': 'application/xml',
-                'Cache-Control': 'max-age=0, s-max-age=600',
-            }
-        }
-    );
+    {
+      headers: {
+        'Content-Type': 'application/xml',
+        'Cache-Control': 'max-age=0, s-max-age=600',
+      }
+    }
+  );
 }

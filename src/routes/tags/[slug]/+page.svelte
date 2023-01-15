@@ -14,6 +14,7 @@
     title: `Wahid Ali - ${data.slug.charAt(0).toUpperCase() + data.slug.slice(1)}`,
     metadescription:"Read the interesting and detailed research blogs about technology worlds sorted according to topics",
     slug: data.slug,
+    type:"website"
   };
 
 </script>

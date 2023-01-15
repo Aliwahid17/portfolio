@@ -7,6 +7,7 @@
     title: "Wahid Ali - Blogs",
     metadescription:"Read the interesting and detailed research blogs about technology worlds",
     slug: "blogs",
+    type:"website"
   };
 </script>
 

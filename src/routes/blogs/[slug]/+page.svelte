@@ -9,6 +9,10 @@
     title: `Wahid Ali - ${post?.postTitle}`,
     metadescription:post?.seoMetaDescription,
     slug: slug,
+    type:"article",
+    datePublished : post?.datePublished,
+    lastUpdated : post?.lastUpdated,
+    readingTime : post?.readingTime,
   };
 </script>
 

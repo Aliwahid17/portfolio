@@ -8,6 +8,7 @@
     title: "Wahid Ali - Tags",
     metadescription:"Page contains all hastags used in blogs.So,you can search according to it",
     slug: "tags",
+    type:"website"
   };
 </script>
 

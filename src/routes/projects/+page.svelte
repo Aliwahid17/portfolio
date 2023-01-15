@@ -7,6 +7,7 @@
     title: "Wahid Ali - Projects",
     metadescription: "Come join my journey in github and collaborate with me on my projects.So,We will learn from eachother",
     slug: "projects",
+    type:"website"
   };
 </script>
 

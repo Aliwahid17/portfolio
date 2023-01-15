@@ -17,6 +17,7 @@
     metadescription:
       'Get in touch with Wahid Ali, contact me for any web development related works.',
     slug: "about",
+    type:"website"
   };
 </script>
 
