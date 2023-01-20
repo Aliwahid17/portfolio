@@ -36,7 +36,7 @@ export async function GET() {
       return `
         <url>
             <loc>http://localhost:5173/${slug}</loc>
-            <lastmod>${new Date(lastUpdated.length === 0 ? datePublished : lastUpdated).toISOString()}</lastmod>
+            <lastmod>${new Date(!lastUpdated ? datePublished : lastUpdated).toISOString()}</lastmod>
         </url>
         `
     }).join('')}

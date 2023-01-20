@@ -20,7 +20,7 @@
 
 <main class="text-white text-md">
   <div class="m-3 text-lg">
-    <article class="m-3 md:mx-32 lg:mx-72">
+    <article class="m-3 md:mx-24 lg:mx-48 xl:mx-64">
       <svelte:component this={page} />
     </article>
   </div>
