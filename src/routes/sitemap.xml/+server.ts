@@ -5,7 +5,7 @@ export const prerender = true
 
 export async function GET() {
 
-  const pagePaths = ['', '/about', '/blogs', '/projects', '/tags']
+  const pagePaths = ['', 'about', 'blogs', 'projects', 'tags']
   const pages = pagePaths.map((element) => `https://www.wahidali.dev/${element}`)
 
   const { posts, parseTag } = await content()
