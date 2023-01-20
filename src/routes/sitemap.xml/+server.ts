@@ -6,7 +6,7 @@ export const prerender = true
 export async function GET() {
 
   const pagePaths = ['', '/about', '/blogs', '/projects', '/tags']
-  const pages = pagePaths.map((element) => `http://localhost:5173${element}`)
+  const pages = pagePaths.map((element) => `https://www.wahidali.dev/${element}`)
 
   const { posts, parseTag } = await content()
   const tags = tag(parseTag)
@@ -35,7 +35,7 @@ export async function GET() {
       const { lastUpdated, slug, datePublished } = element
       return `
         <url>
-            <loc>http://localhost:5173/${slug}</loc>
+            <loc>https://www.wahidali.dev/${slug}</loc>
             <lastmod>${new Date(!lastUpdated ? datePublished : lastUpdated).toISOString()}</lastmod>
         </url>
         `
@@ -43,7 +43,7 @@ export async function GET() {
 
       ${tags.map((element) => `
       <url>
-        <loc>http://localhost:5173/${element}</loc>
+        <loc>https://www.wahidali.dev/${element}</loc>
         <lastmod>${JSON.stringify(new Date().toISOString())}</lastmod>
       </url>`).join('')}
 
