@@ -8,7 +8,7 @@
 </script>
 
 <section class="flex justify-evenly mt-8  ">
-  <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=aliwahid1716@gmail.com&su=${subject}`} target="_blank" rel="noreferrer" class="hover:animate-pulse">
+  <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=contact@wahidali.dev&su=${subject}`} target="_blank" rel="noreferrer" class="hover:animate-pulse">
     <img src={Gmail} alt="gmail" class="w-9 h-9" loading="lazy" title="Gmail" />
   </a>
   <a href="https://github.com/aliwahid17" target="_blank" class="hover:animate-pulse" rel="noreferrer">
