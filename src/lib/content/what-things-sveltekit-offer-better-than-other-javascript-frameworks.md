@@ -25,7 +25,7 @@ readingTime : 5
     import BannerImage from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-based-meta-framework-sveltekit.webp"
     import Javascript_meme from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Javascript-meme.webp"
     import Svelte_so_hot from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-so-hot.webp"
-    import React_Virtual_Dom from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/React-Virtual-Dom.webp"
+    import React_Virtual_Dom from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/React-virtual-dom.webp"
     import Svelte_Less_Code from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-less-code.webp"
     import Svelte_Meme from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-meme.webp"
 
