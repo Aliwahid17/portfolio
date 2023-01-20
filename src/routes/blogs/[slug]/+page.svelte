@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { url } from "$lib/imageURL";
   import type { PageData } from "./$types";
   import SEO from "$lib/components/SEO/index.svelte";
   export let data: PageData;
