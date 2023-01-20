@@ -5,6 +5,7 @@ Hey, I'm Wahid Ali works as FullStack Web Devoloper. I created my portfolio webs
 ## Creating your Own Portfolio + Blog Site
 
 If you like my website you can freely use my webiste for your projects.
+
 ```
 git clone https://github.com/Aliwahid17/portfolio.git
 cd portfolio
@@ -34,7 +35,7 @@ If you find any error and know see some scope of improvements in my projects.Ple
 |    |    |     |-- SEO
 |    |    |     |     └── (contains meta tags components)
 |    |    |     └── (contains common components)
-|    |    └── content
+|    |    |── content
 |    |    |      └── (contains blogPost markdown)
 |    |    └── (contains Typescript logic)
 |    |-- routes
@@ -84,3 +85,41 @@ If you find any error and know see some scope of improvements in my projects.Ple
 |-- tsconfig.json
 └── vite.config.js
 ```
+
+# Blog Post Update Guide
+
+<div class="contain"><span><b class="path">src/lib/content</b> : path contains all blog posts. Named according to blog post title.</span></div>
+
+<div class="contain"><span><b class="path">src/lib/assets/content</b> : path contains all images used in the blog post. Folder named according to blog post title.</span></div>
+
+## Only update the blog in these given scenario :-
+
+<ul>
+    <li>Content or any sources get outdated.</li>
+    <li>Found any grammatic mistake.</li>
+    <li>You know about that topic more and wants to add more details in it for other readers.</li>
+</ul>
+
+If scenario matched and you edited the blog post then run this command in your browser console or in terminal.
+
+```
+console.log(new Date().toISOString())
+```
+
+Copy it result and paste or change the (lastUpdated) meta data in the blog post markdown file.
+
+
+## Warning
+
+If your change didn't fullfil any scenario or if you updated the blog post and forget to update (lastUpdated) meta data then your merge request will be rejected.
+
+
+
+<style>
+    .path{
+        color:red
+    }
+    .contain {
+        display:flex
+    }
+</style>

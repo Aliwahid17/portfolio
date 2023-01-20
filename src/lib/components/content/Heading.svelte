@@ -12,12 +12,12 @@
 
 <header class="my-3 ">
   <h1
-    class="font-semibold text-3xl first:capitalize flex justify-center items-center text-center "
+    class="font-bold text-3xl lg:text-4xl xl:text-5xl first:capitalize flex justify-center items-center text-center "
   >
     {heading}
   </h1>
 
-  <p class="my-2 flex justify-center items-center whitespace-nowrap  ">
+  <p class="my-2 flex justify-center items-center whitespace-nowrap">
     Published on <time datetime={date} >&nbsp;{dateFormat(date)}</time
     >&nbsp;—&nbsp;{time} minutes read
   </p>

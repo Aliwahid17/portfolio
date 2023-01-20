@@ -1,9 +1,7 @@
-import Best_Medium_Format_Camera_for_Starting_Out from '$lib/assets/content/demo/demo.webp'
-import Best_Medium_Format_Camera_for_Starting_Out2 from '$lib/assets/content/demo2/demo2.webp'
+import What_things_sveltekit_offer_better_than_other_javascript_frameworks from '$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-based-meta-framework-sveltekit_320x240.webp'
 
 const ImageURL  = {
-    "Best-Medium-Format-Camera-for-Starting-Out" : Best_Medium_Format_Camera_for_Starting_Out,
-    "Best-Medium-Format-Camera-for-Starting-Out2": Best_Medium_Format_Camera_for_Starting_Out2,
+    "What-things-sveltekit-offer-better-than-other-javascript-frameworks?": What_things_sveltekit_offer_better_than_other_javascript_frameworks
 }  
 
 export default ImageURL

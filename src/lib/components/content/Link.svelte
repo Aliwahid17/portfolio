@@ -7,7 +7,7 @@
   href={source}
   target="_blank"
   rel="noreferrer"
-  class="text-xl text-cyan-500 font-semibold hover:text-red-500 hover:underline"
+  class="text-[#FFE77AFF]  font-semibold hover:text-red-500 hover:underline"
 >
   <span>
   {title}

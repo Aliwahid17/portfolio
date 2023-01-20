@@ -2,14 +2,12 @@
   import { dateFormat } from "$lib/date";
   import { color, tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
-  import imageURL, { url } from "$lib/imageURL";
+  import  { url } from "$lib/imageURL";
   export let posts: Blog[];
   export let parseTag: string[][];
 
-  // const url = (name: string) => {
-  //   const title = name.replaceAll(" ", "-");
-  //   return Object(imageURL)[title];
-  // };
+  console.log(new Date().toISOString())
+
 </script>
 
 <div
@@ -25,7 +23,7 @@
           <img
             src={url(post.postTitle)}
             alt={post.featuredImageAlt}
-            class=" rounded-xl mb-3 object-fill w-full h-full "
+            class=" rounded-xl mb-3  w-full h-full "
             loading="lazy"
             width="320"
             height="240"

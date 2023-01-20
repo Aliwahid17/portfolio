@@ -2,10 +2,10 @@
   import Image from "$lib/assets/home.webp";
   export let values: any;
 
-  const siteURL = "https://www.wahidali.com/";
-  const facebookPage = "";
-  const facebookAuthorPage = "";
-  const twitterUsername = "";
+  const siteURL = "https://www.wahidali.dev/";
+  const facebookPage = "https://www.facebook.com/aliwahid17";
+  const facebookAuthorPage = "https://www.facebook.com/aliwahid17";
+  const twitterUsername = "https://www.facebook.com/aliwahid17";
   const author = "Wahid Ali";
 </script>
 
