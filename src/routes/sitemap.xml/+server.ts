@@ -27,7 +27,7 @@ export async function GET() {
       ${pages.map((element) => `
       <url>
         <loc>${element}</loc>
-        <lastmod>${JSON.stringify(new Date().toISOString())}</lastmod>
+        <lastmod>${new Date().toISOString()}</lastmod>
       </url>
       `).join('')}
 
@@ -44,7 +44,7 @@ export async function GET() {
       ${tags.map((element) => `
       <url>
         <loc>https://www.wahidali.dev/${element}</loc>
-        <lastmod>${JSON.stringify(new Date().toISOString())}</lastmod>
+        <lastmod>${new Date().toISOString()}</lastmod>
       </url>`).join('')}
 
 
