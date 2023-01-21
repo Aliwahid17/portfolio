@@ -88,17 +88,15 @@ If you find any error and know see some scope of improvements in my projects.Ple
 
 # Blog Post Update Guide
 
-<div class="contain"><span><b class="path">src/lib/content</b> : path contains all blog posts. Named according to blog post title.</span></div>
+`src/lib/content` : path contains all blog posts. Named according to blog post title.
 
-<div class="contain"><span><b class="path">src/lib/assets/content</b> : path contains all images used in the blog post. Folder named according to blog post title.</span></div>
+`src/lib/assets/content` : path contains all images used in the blog post. Folder named according to blog post title.
 
 ## Only update the blog in these given scenario :-
 
-<ul>
-    <li>Content or any sources get outdated.</li>
-    <li>Found any grammatic mistake.</li>
-    <li>You know about that topic more and wants to add more details in it for other readers.</li>
-</ul>
++ Content or any sources get outdated.
++ Found any grammatic mistake.
++ You know about that topic more and wants to add more details in it for other readers.
 
 If scenario matched and you edited the blog post then run this command in your browser console or in terminal.
 
@@ -108,18 +106,6 @@ console.log(new Date().toISOString())
 
 Copy it result and paste or change the (lastUpdated) meta data in the blog post markdown file.
 
-
 ## Warning
 
 If your change didn't fullfil any scenario or if you updated the blog post and forget to update (lastUpdated) meta data then your merge request will be rejected.
-
-
-
-<style>
-    .path{
-        color:red
-    }
-    .contain {
-        display:flex
-    }
-</style>

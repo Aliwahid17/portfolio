@@ -1,9 +1,7 @@
 import type { Blog } from 'src/app';
 import type { PageLoad } from './$types';
 import { blogs } from "$lib/store";
-import { tag } from '$lib/tag';
 
-export const csr = false
 export const load: PageLoad = async ({ params }) => {
 
     const blog: Blog[] = []
@@ -21,7 +19,7 @@ export const load: PageLoad = async ({ params }) => {
 
     })
 
-    if (tag(blogsTag).includes(params.slug)) {
+    if (blog.length > 0) {
         return {
             'blogs': blog,
             'blogsTag': blogsTag,
