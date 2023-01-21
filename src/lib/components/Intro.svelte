@@ -7,7 +7,7 @@
   <section
     class="flex justify-center items-center font-bold font-mono text-3xl md:text-4xl "
   >
-    <span use:concurrent={{ interval: 150 }}>Hi,I'm Wahid Ali</span><span class="wave">👋</span>
+    <h1 use:concurrent={{ interval: 150 }}>Hi,I'm Wahid Ali</h1><span class="wave">👋</span>
   </section>
 
   <section

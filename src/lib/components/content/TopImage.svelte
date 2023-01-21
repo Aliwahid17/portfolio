@@ -1,6 +1,7 @@
 <script lang="ts">
   export let image: string;
   export let imageAlt: string;
+  export let load : 'eager' | 'lazy'
 </script>
 
 <picture class="flex justify-center items-center">
@@ -10,6 +11,6 @@
     height="268"
     src={image}
     alt={imageAlt}
-    loading="lazy"
+    loading={load}
   /></picture
 >

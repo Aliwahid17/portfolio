@@ -8,15 +8,17 @@
     title: "Wahid Ali - Tags",
     metadescription:"Page contains all hastags used in blogs.So,you can search according to it",
     slug: "tags",
-    type:"website"
+    type:"website",
+    image : 'home.webp',
+    imageAlt : "If at first, you don't succeed you must be programmer."
   };
 </script>
 
 <SEO values={seoProps} />
 
 <section class="text-white my-8 ">
-  <h2 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
+  <h1 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
     All Tags <span class="wave"> #️⃣</span>
-  </h2>
+  </h1>
   <Tags tags={tag($blogs.parseTag)} />
 </section>

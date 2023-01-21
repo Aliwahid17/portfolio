@@ -2,14 +2,14 @@
 
 author : Wahid Ali
 postTitle: What things sveltekit offer better than other javascript frameworks?
-focusKeyphrase: best medium format camera
+focusKeyphrase: sveltekit javascript frameworks
 datePublished: 2023-01-20T10:50:46.469Z
 lastUpdated: 
 seoMetaDescription: In between the chaos of javascript frameworks, I'm simply trying to put light on sveltekit unique features and the tradeoffs it brings.
-featuredImage: Svelte-based-meta-framework-sveltekit_320x240.webp
+featuredImage: what-things-sveltekit-offer-better-than-other-javascript-frameworks.webp
 featuredImageAlt: Sveltekit framework official image
 categories:  Framework
-tags: svelte,sveltekit,fullstack
+tags: svelte,sveltekit,fullstack,Javascript
 readingTime : 5
 
 ---
@@ -33,7 +33,7 @@ readingTime : 5
 
 <Heading heading={postTitle} date={datePublished} time={readingTime} latest={lastUpdated} tags={tags} />
 
-<TopImage image={BannerImage} imageAlt={featuredImageAlt}  />
+<TopImage image={BannerImage} imageAlt={featuredImageAlt} load="eager" />
 
 <Data>
 
@@ -50,7 +50,7 @@ So, it is your time to choose which gang you support and spend most time figurin
 I'm just trying to show why you should at least once try sveltekit in the web development frameworks war.
 </Data>
 
-<TopImage image={Javascript_meme} imageAlt="Fun of javascript developers meme based on IT movie"  />
+<TopImage image={Javascript_meme} imageAlt="Fun of javascript developers meme based on IT movie" load="lazy" />
 
 
 <SubHeading subHeading="What Are Svelte And Sveltekit?" />
@@ -72,7 +72,7 @@ Source : <Link source="https://kit.svelte.dev/docs/introduction" title="Svelteki
 
 <SubHeading subHeading="Why Are Svelte And Sveltekit On The Hype Train?" />
 
-<TopImage image={Svelte_so_hot} imageAlt="Svelte Popularity meme"  />
+<TopImage image={Svelte_so_hot} imageAlt="Svelte Popularity meme" load="lazy" />
 
 <Data>
 
@@ -88,7 +88,7 @@ Source : <Link source="https://www.bairesdev.com/blog/svelte-and-why-you-should-
 
 <SubHeading subHeading="No Virtual DOM" />
 
-<TopImage image={React_Virtual_Dom} imageAlt="React Virtual Dom"  />
+<TopImage image={React_Virtual_Dom} imageAlt="React Virtual Dom" load="lazy"  />
 
 <Data>
 
@@ -106,7 +106,7 @@ All your written code mainly compiles instead of comparing objects in virtual do
 
 <SubHeading subHeading="Less Code" />
 
-<TopImage image={Svelte_Less_Code} imageAlt="Sveltekit Less Code" />
+<TopImage image={Svelte_Less_Code} imageAlt="Sveltekit Less Code" load="lazy" />
 
 <Data>
 
@@ -124,7 +124,7 @@ In svelte, it uses a script tag to write javascript and a style to write CSS. Yo
 
 <SubHeading subHeading="Truly Reactive" />
 
-<TopImage image={Svelte_Meme} imageAlt="Sveltekit meme" />
+<TopImage image={Svelte_Meme} imageAlt="Sveltekit meme" load="lazy" />
 
 <Data>
 
@@ -140,7 +140,7 @@ Sveltekit reduces 65 character codes of Nextjs codes into 11 character codes.
 
 </Data>
 
-<SubHeading subHeading="What Are The Cons Of Svelte And Sveltekit?" />
+<SubHeading subHeading="What Are The Cons Of Svelte And Sveltekit?"  load="lazy" />
 
 <Data>
 

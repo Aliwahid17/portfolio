@@ -35,7 +35,7 @@ export async function GET() {
       const { lastUpdated, slug, datePublished } = element
       return `
         <url>
-            <loc>https://www.wahidali.dev/${slug}</loc>
+            <loc>https://www.wahidali.dev/blogs/${slug}</loc>
             <lastmod>${new Date(!lastUpdated ? datePublished : lastUpdated).toISOString()}</lastmod>
         </url>
         `
@@ -43,7 +43,7 @@ export async function GET() {
 
       ${tags.map((element) => `
       <url>
-        <loc>https://www.wahidali.dev/${element}</loc>
+        <loc>https://www.wahidali.dev/tags/${element}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
       </url>`).join('')}
 

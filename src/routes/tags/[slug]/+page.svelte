@@ -13,8 +13,10 @@
   const seoProps = {
     title: `Wahid Ali - ${data.slug.charAt(0).toUpperCase() + data.slug.slice(1)}`,
     metadescription:"Read the interesting and detailed research blogs about technology worlds sorted according to topics",
-    slug: data.slug,
-    type:"website"
+    slug: `tags/${data.slug}`,
+    type:"website",
+    image : 'home.webp',
+    imageAlt : "If at first, you don't succeed you must be programmer."
   };
 
 </script>
@@ -26,12 +28,12 @@
 
 
 <section class="  text-white my-8 ">
-  <h2 class=" text-2xl font-semibold flex justify-center items-center py-11  ">
+  <h1 class=" text-2xl font-semibold flex justify-center items-center py-11  ">
     <span class="wave"> #️⃣</span>
     <p class="first-letter:capitalize">
       {data.slug}
     </p>
-  </h2>
+  </h1>
   <Tags tags={tag(data.blogsTag)} />
 </section>
 

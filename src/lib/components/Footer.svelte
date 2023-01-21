@@ -11,7 +11,7 @@
     <Social />
   </div>
 
-  <span class=" text-lg ">&#169; Copyright 2022 <a href="/" class="font-bold underline mx-1  ">Wahid Ali</a></span>
+  <span class=" text-lg ">&#169; Copyright 2023 <a href="/" class="font-bold underline mx-1  ">Wahid Ali</a></span>
 
   <p class="flex justify-evenly items-center text-lg my-5  ">
     <a

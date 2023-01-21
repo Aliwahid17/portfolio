@@ -5,13 +5,15 @@
   const { page, post, slug } = data;
 
   const seoProps = {
-    title: `Wahid Ali - ${post?.postTitle}`,
+    title: post?.postTitle,
     metadescription:post?.seoMetaDescription,
-    slug: slug,
+    slug: `blogs/${slug}`,
     type:"article",
     datePublished : post?.datePublished,
     lastUpdated : post?.lastUpdated,
     readingTime : post?.readingTime,
+    image : `content/${post?.featuredImage}`,
+    imageAlt : post?.featuredImageAlt
   };
 </script>
 

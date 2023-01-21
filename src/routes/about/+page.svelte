@@ -17,7 +17,9 @@
     metadescription:
       'Get in touch with Wahid Ali, contact me for any web development related works.',
     slug: "about",
-    type:"website"
+    type:"website",
+    image : 'home.webp',
+    imageAlt : "If at first, you don't succeed you must be programmer."
   };
 </script>
 

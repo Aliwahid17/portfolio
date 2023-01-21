@@ -2,12 +2,8 @@
   import { dateFormat } from "$lib/date";
   import { color, tagIndex } from "$lib/tagIndex";
   import type { Blog } from "src/app";
-  import  { url } from "$lib/imageURL";
   export let posts: Blog[];
   export let parseTag: string[][];
-
-  console.log(new Date().toISOString())
-
 </script>
 
 <div
@@ -17,11 +13,10 @@
     <article
       class="rounded-xl my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
     >
-      <div class="rounded-[10px]   bg-gray-900 p-2 ">
-  
+      <div class="rounded-[10px]   bg-gray-900 p-2 ">  
         <picture>
           <img
-            src={url(post.postTitle)}
+          src={`/assets/content/${post.featuredImage}`}
             alt={post.featuredImageAlt}
             class=" rounded-xl mb-3  w-full h-full "
             loading="lazy"
