@@ -5,7 +5,7 @@
   const { page, post, slug } = data;
 
   const seoProps = {
-    title: post?.postTitle,
+    title: `Wahid Ali - ${post?.postTitle}`,
     metadescription:post?.seoMetaDescription,
     slug: `blogs/${slug}`,
     type:"article",
