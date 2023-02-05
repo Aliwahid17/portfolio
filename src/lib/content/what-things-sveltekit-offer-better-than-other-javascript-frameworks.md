@@ -9,7 +9,7 @@ seoMetaDescription: In between the chaos of javascript frameworks, I'm simply tr
 featuredImage: what-things-sveltekit-offer-better-than-other-javascript-frameworks.webp
 featuredImageAlt: Sveltekit framework official image
 categories:  Framework
-tags: svelte,sveltekit,fullstack,Javascript
+tags: svelte,sveltekit,fullstack,javascript
 readingTime : 5
 
 ---

@@ -1,7 +1,7 @@
 import { content } from "$lib/content";
 import { tag } from "$lib/tag";
 
-export const prerender = true
+// export const prerender = true
 
 export async function GET() {
 
