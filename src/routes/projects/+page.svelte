@@ -1,7 +1,9 @@
 <script lang="ts">
   import Projects from "$lib/components/Projects.svelte";
-  import { projects } from "$lib/store";
   import SEO from "$lib/components/SEO/index.svelte";
+	import type { PageData } from "../$types";
+
+  export let data : PageData
 
   const seoProps = {
     title: "Wahid Ali - Projects",
@@ -19,5 +21,5 @@
   <h1 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
     All Projects <span class="wave"> 👩‍💻</span>
   </h1>
-  <Projects value={$projects} />
+  <Projects value={data.projects} />
 </section>

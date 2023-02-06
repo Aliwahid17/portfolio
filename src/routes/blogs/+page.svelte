@@ -1,7 +1,9 @@
 <script lang="ts">
   import Blogs from "$lib/components/Blogs.svelte";
-  import { blogs } from "$lib/store";
   import SEO from "$lib/components/SEO/index.svelte";
+	import type { PageData } from "../$types";
+
+  export let data : PageData
 
   const seoProps = {
     title: "Wahid Ali - Blogs",
@@ -15,10 +17,9 @@
 
 <SEO values={seoProps} />
 
-
 <section class="  text-white my-8 ">
   <h1 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
     All Blogs <span class="wave"> 📖</span>
   </h1>
-  <Blogs posts={$blogs.posts} parseTag={$blogs.parseTag} />
+  <Blogs posts={data.posts} parseTag={data.tags} />
 </section>

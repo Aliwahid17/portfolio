@@ -1,23 +1,22 @@
 import type { Blog } from 'src/app';
 import type { PageLoad } from './$types';
-import { blogs } from "$lib/store";
+import { content } from '$lib/content';
 
 export const load: PageLoad = async ({ params }) => {
 
+    const contents = await content()
     const blog: Blog[] = []
     const blogsTag: string[][] = []
 
-    blogs.subscribe(value => {
 
-        for (let index = 0; index < value.posts.length; index++) {
-            if (value.posts[index].tags.includes(params.slug)) {
-                blogsTag.push(value.parseTag[index]);
-                blog.push(value.posts[index]);
-            }
-
+    for (let index = 0; index < contents.posts.length; index++) {
+        if (contents.posts[index].tags.includes(params.slug)) {
+            blogsTag.push(contents.parseTag[index]);
+            blog.push(contents.posts[index]);
         }
 
-    })
+
+    }
 
     if (blog.length > 0) {
         return {

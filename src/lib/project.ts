@@ -17,4 +17,3 @@ export const project = async () => {
         console.log(e)
     }
 }
-

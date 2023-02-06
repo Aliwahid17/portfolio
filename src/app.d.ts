@@ -1,14 +1,15 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-// and what to do when importing types
-declare namespace App {
-	// interface Locals {}
-	// interface PageData {}
-	// interface Error {}
-	// interface Platform {}
+declare global {
+	namespace App {
+		// interface Error {}
+		// interface Locals {}
+		// interface PageData {}
+		// interface Platform {}
+	}
 }
 
-export interface Blog {
+interface Blog {
 	[x: string];
 	postTitle: string;
 	focusKeyphrase: string;
@@ -24,7 +25,7 @@ export interface Blog {
 	readingTime: string;
 }
 
-export interface Github {
+interface Github {
 	[x: string],
 	id: number;
 	node_id: string;
@@ -172,3 +173,5 @@ export enum Type {
 export enum Visibility {
 	Public = "public",
 }
+
+export {Blog , Github}

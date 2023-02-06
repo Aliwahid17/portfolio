@@ -2,9 +2,9 @@
   import Blogs from "$lib/components/Blogs.svelte";
   import Intro from "$lib/components/Intro.svelte";
   import Projects from "$lib/components/Projects.svelte";
-  import { recentItems } from "$lib/store";
   import SEO from '$lib/components/SEO/index.svelte'
-
+	import type { PageData } from "./$types";
+  export let data:PageData
 
   const seoProps  = {
     title : "Wahid Ali - Home",
@@ -17,8 +17,6 @@
 
 </script>
 
-
-
 <SEO values={seoProps} />
 
 <main class="mx-2">
@@ -28,12 +26,7 @@
       Recommended Reading <span class="wave">📖</span>
     </h2>
 
-    {#if typeof $recentItems.recentBlogs[0] !== "undefined"}
-      <Blogs
-        posts={$recentItems.recentBlogs}
-        parseTag={$recentItems.blogsTag}
-      />
-    {/if}
+    <Blogs posts={data.posts} parseTag={data.tags} />
 
     <div class="flex justify-center items-center  py-10 ">
       <a
@@ -53,7 +46,7 @@
     <section class="my-11">
       <h2 class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></h2>
 
-      <Projects value={$recentItems.recentProjects} />
+      <Projects value={data.projects} />
 
       <div class="flex justify-center items-center  py-10 ">
         <a
