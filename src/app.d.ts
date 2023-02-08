@@ -174,4 +174,10 @@ export enum Visibility {
 	Public = "public",
 }
 
-export {Blog , Github}
+export interface GithubColor {
+	color: null | string;
+	url: string;
+	[x:string],
+}
+
+export { Blog, Github, GithubColor }

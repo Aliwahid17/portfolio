@@ -21,5 +21,5 @@
   <h1 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
     All Projects <span class="wave"> 👩‍💻</span>
   </h1>
-  <Projects value={data.projects} />
+  <Projects value={data.projects} color={data.color} />
 </section>

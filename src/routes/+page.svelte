@@ -15,6 +15,7 @@
     imageAlt : "If at first, you don't succeed you must be programmer."
   }
 
+
 </script>
 
 <SEO values={seoProps} />
@@ -46,7 +47,7 @@
     <section class="my-11">
       <h2 class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></h2>
 
-      <Projects value={data.projects} />
+      <Projects value={data.projects} color={data.color} />
 
       <div class="flex justify-center items-center  py-10 ">
         <a

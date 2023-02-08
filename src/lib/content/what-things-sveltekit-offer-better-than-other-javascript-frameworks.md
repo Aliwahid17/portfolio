@@ -29,6 +29,20 @@ readingTime : 5
     import Svelte_Less_Code from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-less-code.webp"
     import Svelte_Meme from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-meme.webp"
 
+        import Card from "$lib/components/content/Card.svelte"
+    const recommand = [
+        {
+            postTitle : "What things sveltekit offer better than other javascript frameworks?",
+            datePublished: "2023-01-20T10:50:46.469Z",
+            slug : "what-things-sveltekit-offer-better-than-other-javascript-frameworks"
+        },
+        {
+            postTitle : "Is the Tailwindcss worth right using in your projects?",
+            datePublished: "2023-01-20T10:50:46.469Z",
+            slug : "is-the-tailwindcss-worth-right-using-in-your-projects"
+        }
+    ]
+
 </script>
 
 <Heading heading={postTitle} date={datePublished} time={readingTime} latest={lastUpdated} tags={tags} />
@@ -214,3 +228,5 @@ The framework does not matter how you will handle and use that framework in your
 <Github />
 
 </Data>
+
+<Card post={recommand} />

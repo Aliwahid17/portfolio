@@ -14,15 +14,24 @@ export const load: PageLoad = async ({ params }) => {
             blogsTag.push(contents.parseTag[index]);
             blog.push(contents.posts[index]);
         }
-
-
     }
+
+    const seoProps = {
+        title: `Wahid Ali - ${params.slug.charAt(0).toUpperCase() + params.slug.slice(1)}`,
+        metadescription: "Read the interesting and detailed research blogs about technology worlds sorted according to topics",
+        slug: `tags/${params.slug}`,
+        type: "website",
+        image: 'home.webp',
+        imageAlt: "If at first, you don't succeed you must be programmer."
+    };
 
     if (blog.length > 0) {
         return {
             'blogs': blog,
             'blogsTag': blogsTag,
-            'slug': params.slug
+            'slug': params.slug,
+            'tags' : contents.parseTag,
+            'seoProps' : seoProps
         }
     }
 
