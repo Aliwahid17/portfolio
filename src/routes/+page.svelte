@@ -23,9 +23,9 @@
 <main class="mx-2">
   <Intro />
   <section class="bg-[#181818] my-11   text-white  ">
-    <h2 class=" text-2xl font-semibold flex justify-center items-center py-12  ">
+    <p class=" text-2xl font-semibold flex justify-center items-center py-12  ">
       Recommended Reading <span class="wave">📖</span>
-    </h2>
+    </p>
 
     <Blogs posts={data.posts} parseTag={data.tags} />
 
@@ -45,7 +45,7 @@
 
   <section class="  text-white  ">
     <section class="my-11">
-      <h2 class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></h2>
+      <p class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></p>
 
       <Projects value={data.projects} color={data.color} />
 

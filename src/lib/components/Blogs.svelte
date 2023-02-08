@@ -16,7 +16,7 @@
           <img
           src={`/assets/content/${post.featuredImage}`}
             alt={post.featuredImageAlt}
-            class=" rounded-xl mb-3 object-fill w-80 h-60 "
+            class=" rounded-xl mb-3 w-full h-full "
             loading="lazy"
             width="320"
             height="240"
@@ -25,15 +25,15 @@
 
         <time
           datetime={post.datePublished}
-          class="block text-xs text-gray-400 px-2 "
+          class="block text-xs text-gray-200 px-2 "
         >
           {dateFormat(post.datePublished)}
         </time>
 
         <a href={`/blogs/${post.slug}`} data-sveltekit-preload-data="hover">
-          <h3 class="mt-0.5 px-2 text-lg font-bold text-white">
+          <h2 class="mt-0.5 px-2 text-lg font-bold text-white">
             {post.postTitle}
-          </h3>
+          </h2>
         </a>
 
         <p class="mt-0.5 px-2 text-sm font-medium  text-white">

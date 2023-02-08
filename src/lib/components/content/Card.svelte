@@ -16,7 +16,7 @@
 			class="rounded-xl group  my-5 h-fit md:mx-2 bg-gradient-to-r  from-green-300 via-cyan-500 to-sky-600 p-0.5 shadow-xl transition hover:animate-background hover:bg-[length:400%_400%] hover:shadow-sm hover:[animation-duration:_4s] shadow-gray-700/75"
 		>
 			<article class="rounded-[10px] bg-gray-900 p-2 ">
-				<time datetime={value.datePublished} class="block text-xs text-gray-400 px-2 ">
+				<time datetime={value.datePublished} class="block text-xs text-gray-200 px-2 ">
 					{dateFormat(value.datePublished)}
 				</time>
 

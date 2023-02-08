@@ -12,19 +12,19 @@
 		>
 			<div class="rounded-[10px]   bg-gray-900 p-2 ">
 				<div class="flex justify-between items-center ">
-					<time datetime={content.created_at} class="block text-xs text-gray-400 px-2 ">
+					<time datetime={content.created_at} class="block text-xs text-gray-200 px-2 ">
 						{dateFormat(content.created_at)}
 					</time>
 
-					<time datetime={content?.pushed_at} class="block text-xs text-gray-400 px-2 ">
+					<time datetime={content?.pushed_at} class="block text-xs text-gray-200 px-2 ">
 						Recent Commit: {dateFormat(content.pushed_at)}
 					</time>
 				</div>
 
 				<a href={content.svn_url} target="_blank" rel="noreferrer">
-					<h3 class="mt-0.5 px-2 text-lg font-bold text-white first-letter:capitalize">
+					<h2 class="mt-0.5 px-2 text-lg font-bold text-white first-letter:capitalize ">
 						{content.name}
-					</h3>
+					</h2>
 				</a>
 
 				<p class="mt-0.5 px-2 text-sm font-medium  text-white">
