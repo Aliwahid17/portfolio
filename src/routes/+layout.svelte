@@ -73,12 +73,12 @@
 
 		gtag('config', 'G-8P4ZG0K93R');
 	</script>
-	<!-- <script
+	<script
 		type="text/partytown"
 		async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9331685192408853"
 		crossorigin="anonymous"
-	></script> -->
+	></script>
 </svelte:head>
 
 <Navbar />
