@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@builder.io/partytown': ^0.7.5
   '@sveltejs/adapter-auto': ^1.0.0
   '@sveltejs/adapter-static': ^1.0.6
   '@sveltejs/kit': ^1.0.0
@@ -30,6 +31,7 @@ specifiers:
   web-vitals: ^3.1.1
 
 dependencies:
+  '@builder.io/partytown': 0.7.5
   '@types/cookie': 0.5.1
   '@vercel/analytics': 0.1.8
   cookie: 0.5.0
@@ -61,6 +63,11 @@ devDependencies:
   vite: 4.1.1
 
 packages:
+
+  /@builder.io/partytown/0.7.5:
+    resolution: {integrity: sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==}
+    hasBin: true
+    dev: false
 
   /@esbuild/android-arm/0.16.17:
     resolution: {integrity: sha512-N9x1CMXVhtWEAMS7pNNONyA14f71VPQN9Cnavj1XQh6T7bskqiLLrSca4O0Vr8Wdcga943eThxnVp3JLnBMYtw==}
