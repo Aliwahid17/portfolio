@@ -8,7 +8,7 @@
 
   const seoProps  = {
     title : "Wahid Ali - Home",
-    metadescription:"I'm a self taught full stack developer with good knowledge and experience with the latest web technologies my main goal is to work with talented people through my work and technical content",
+    metadescription:"I'm Wahid Ali, Full Stack Developer creating innovative projects. Expertise & experience in web development. Explore my latest work on my personal website.",
     slug : '',
     type : 'website',
     image : 'home.webp',

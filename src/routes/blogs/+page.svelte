@@ -7,7 +7,7 @@
 
   const seoProps = {
     title: "Wahid Ali - Blogs",
-    metadescription:"Read the interesting and detailed research blogs about technology worlds",
+    metadescription:"Stay informed with Wahid Ali's blog. Full Stack Developer sharing insights on web development, technology, and beyond.",
     slug: "blogs",
     type:"website",
     image : 'home.webp',

@@ -19,7 +19,7 @@
   />
   <link rel="canonical" href={`${siteURL}${values.slug}`} />
 
-  <meta property="og:site_name" content="Wahid Ali Portfolio And Blogs" />
+  <meta property="og:site_name" content="Wahid Ali" />
   <meta property="og:locale" content="en" />
   <meta property="og:url" content={`${siteURL}${values.slug}`} />
   <meta property="og:title" content={values.title} />
@@ -31,6 +31,7 @@
   <meta property="og:image:height" content="628" />
 
   {#if values.type === "article"}
+    <meta property="keywords" content={values.keywords} />
     <meta property="article:publisher" content={facebookPage} />
     <meta property="article:author" content={facebookAuthorPage} />
     <meta property="article:published_time" content={values.datePublished} />

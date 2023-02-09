@@ -8,7 +8,7 @@
 
   const seoProps = {
     title: "Wahid Ali - Tags",
-    metadescription:"Page contains all hastags used in blogs.So,you can search according to it",
+    metadescription:"Join the conversation with Wahid Ali, Full Stack Developer. Explore blogs according to hashtags.",
     slug: "tags",
     type:"website",
     image : 'home.webp',

@@ -18,7 +18,7 @@ export const load: PageLoad = async ({ params }) => {
 
     const seoProps = {
         title: `Wahid Ali - ${params.slug.charAt(0).toUpperCase() + params.slug.slice(1)}`,
-        metadescription: "Read the interesting and detailed research blogs about technology worlds sorted according to topics",
+        metadescription: `Join the conversation with Wahid Ali, Full Stack Developer. Explore ${params.slug} blogs here.`,
         slug: `tags/${params.slug}`,
         type: "website",
         image: 'home.webp',

@@ -2,8 +2,8 @@
 
 author : Wahid Ali
 postTitle: Is the Tailwindcss worth right using in your projects?
-focusKeyphrase: CSS tailwindcss frameworks
-datePublished: 2023-01-20T10:50:46.469Z
+focusKeyphrase: CSS,tailwindcss,frameworks
+datePublished: 2023-02-09T06:48:09.124Z
 lastUpdated: 
 seoMetaDescription: Nowadays, website design evolves complex, so to achieve that complexity. You have to use power tools to design, one of which is tailwindcss.
 featuredImage: is-the-tailwindcss-worth-right-using-in-your-projects.webp
@@ -27,17 +27,11 @@ readingTime : 3
     import TailwindSpeed from "$lib/assets/content/is-the-tailwindcss-worth-right-using-in-your-projects/tailwindcss-comparison-with-css.webp"
     import TailwindCode from "$lib/assets/content/is-the-tailwindcss-worth-right-using-in-your-projects/tailwindcss-syntax-example.webp"
 
-
     const recommand = [
         {
             postTitle : "What things sveltekit offer better than other javascript frameworks?",
             datePublished: "2023-01-20T10:50:46.469Z",
             slug : "what-things-sveltekit-offer-better-than-other-javascript-frameworks"
-        },
-        {
-            postTitle : "Is the Tailwindcss worth right using in your projects?",
-            datePublished: "2023-01-20T10:50:46.469Z",
-            slug : "is-the-tailwindcss-worth-right-using-in-your-projects"
         }
     ]
 
@@ -61,9 +55,6 @@ One of the popular solutions is tailwindcss, which we talk about in this blog.
 Source : <Link source="https://stackdiary.com/tailwind-components-ui-kits/" title="Tailwind CSS: 15 Component Libraries & UI Kits" />
 </Data>
 
-<!-- <TopImage image={Javascript_meme} imageAlt="Fun of javascript developers meme based on IT movie" load="lazy" /> -->
-
-
 <SubHeading subHeading="What is tailwindcss?" />
 
 <Data>
@@ -79,8 +70,6 @@ Source : <Link source="https://www.freecodecamp.org/news/what-is-tailwind-css-a-
 </Data>
 
 <SubHeading subHeading="Pros of tailwindcss" />
-
-<!-- <TopImage image={Svelte_so_hot} imageAlt="Svelte Popularity meme" load="lazy" /> -->
 
 <Data>
 
@@ -140,16 +129,11 @@ It has good community support. You can smoothly get the component library like  
 
 <SubHeading subHeading="Cons of Tailwindcss" />
 
-<!-- <TopImage image={Svelte_so_hot} imageAlt="Svelte Popularity meme" load="lazy" /> -->
-
 <Data>
 
 Everythings have its tradeoffs same goes with tailwindcss. I'm telling you its the main disadvantages so you can evaluate whether it will suit your project.
 
-<!-- Source : <Link source="https://www.incentius.com/blog-posts/pros-and-cons-of-using-tailwind-css/" title="Pros and Cons of Using Tailwind CSS" /> -->
-
 </Data>
-
 
 <h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Large HTML Files</h3>
 

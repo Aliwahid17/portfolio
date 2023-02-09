@@ -7,7 +7,7 @@
 
   const seoProps = {
     title: "Wahid Ali - Projects",
-    metadescription: "Come join my journey in github and collaborate with me on my projects.So,We will learn from eachother",
+    metadescription: "Explore the latest Full Stack Developer projects by Wahid Ali. Get a glimpse into my expertise & experience in web development on my project page.",
     slug: "projects",
     type:"website",
     image : 'home.webp',
