@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build && partytown copylib build/~partytown",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -38,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@builder.io/partytown": "^0.7.5",
 		"@types/cookie": "^0.5.1",
 		"@vercel/analytics": "^0.1.8",
 		"cookie": "^0.5.0",
