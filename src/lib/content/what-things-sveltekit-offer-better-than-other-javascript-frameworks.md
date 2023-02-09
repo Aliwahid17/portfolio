@@ -2,14 +2,14 @@
 
 author : Wahid Ali
 postTitle: What things sveltekit offer better than other javascript frameworks?
-focusKeyphrase: sveltekit javascript frameworks
+focusKeyphrase: sveltekit,javascript,frameworks,svelte
 datePublished: 2023-01-20T10:50:46.469Z
-lastUpdated: 
+lastUpdated: 2023-02-09T06:23:55.336Z
 seoMetaDescription: In between the chaos of javascript frameworks, I'm simply trying to put light on sveltekit unique features and the tradeoffs it brings.
 featuredImage: what-things-sveltekit-offer-better-than-other-javascript-frameworks.webp
 featuredImageAlt: Sveltekit framework official image
 categories:  Framework
-tags: svelte,sveltekit,fullstack,Javascript
+tags: svelte,sveltekit,fullstack,javascript
 readingTime : 5
 
 ---
@@ -21,6 +21,7 @@ readingTime : 5
     import Link from "$lib/components/content/Link.svelte"
     import Data from "$lib/components/content/Data.svelte"
     import Github from "$lib/components/content/Github.svelte"
+    import Card from "$lib/components/content/Card.svelte"
 
     import BannerImage from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-based-meta-framework-sveltekit.webp"
     import Javascript_meme from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Javascript-meme.webp"
@@ -28,6 +29,14 @@ readingTime : 5
     import React_Virtual_Dom from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/React-virtual-dom.webp"
     import Svelte_Less_Code from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-less-code.webp"
     import Svelte_Meme from "$lib/assets/content/what-things-sveltekit-offer-better-than-other-javascript-frameworks/Svelte-meme.webp"
+
+    const recommand = [
+        {
+            postTitle : "Is the Tailwindcss worth right using in your projects?",
+            datePublished: "2023-01-20T10:50:46.469Z",
+            slug : "is-the-tailwindcss-worth-right-using-in-your-projects"
+        }
+    ]
 
 </script>
 
@@ -43,7 +52,7 @@ Now, web developers can develop a high-performing web app without so much bangin
 
 As you know, more options mean more confusion. And the more you try to find the answer of which framework is best, the more you get confused by social media alpha programmers.
 
-Because of these things, now javascript is not just a programming language. Instead, it became a war.  
+Because of these things, now javascript is not just a programming language. Instead, it became a war.  
 
 So, it is your time to choose which gang you support and spend most time figuring out why my website is not working.
 
@@ -101,7 +110,6 @@ On the other hand, svelte and its meta framework sveltekit don't face that probl
 That means clients don't need to load any specific javascript code to run sveltekit in their browser. The client eventually loads vanilla javascript code in their browser to run your web app.
 
 All your written code mainly compiles instead of comparing objects in virtual doms. This approach, not having to load the whole package in your project, significantly reduces the size of the bundle. It is more beneficial for mobile devices.
-
 </Data>
 
 <SubHeading subHeading="Less Code" />
@@ -114,12 +122,11 @@ Other frameworks and libraries come with a layer of abstraction. It means they i
 
 Eventually, our job as a programmer is to solve computer-related problems. But sometimes, problem-solving frameworks and libraries get far away from solving problems.
 
-Instead, they make the simple task more complex, become hard to debug and introduce more boilerplate code, weird rules, weird syntax, and many more issues in the projects.
+Instead, they make the simple task more complex, become hard to debug, and introduce more boilerplate code, weird rules, weird syntax, and many more issues in the projects.
 
 In the javascript frameworks war, sveltekit fights those issues and tries to stick to the vanilla javascript on steroid approach. That made sveltekit a beginner-friendly framework, and you can achieve the same as react, vue with 30% - 40% less code.
 
 In svelte, it uses a script tag to write javascript and a style to write CSS. You don't need to get an element from dom and then manipulate it. Instead, you can use your variable directly in your HTML and svelte handle everything on compile time.
-
 </Data>
 
 <SubHeading subHeading="Truly Reactive" />
@@ -135,22 +142,15 @@ It reduces client-side work that eventually shows a fast web app, and your websi
 In other frameworks and libraries, you need to use hooks to change the state, which leads to more boilerplate and increases the work of the garbage collector.
 
 Sveltekit reduces 65 character codes of Nextjs codes into 11 character codes.
-
-
-
 </Data>
 
 <SubHeading subHeading="What Are The Cons Of Svelte And Sveltekit?"  load="lazy" />
 
 <Data>
 
-Svelte smartly updates the DOM at build time. That lets users build their applications according to their conditions without caring about unnecessary overhead.
+Everything comes with its tradeoffs, and a clever programmer should know the pros and cons of the things you are using in projects and careers.
 
-It reduces client-side work that eventually shows a fast web app, and your website gets a better SEO ranking.
-
-In other frameworks and libraries, you need to use hooks to change the state, which leads to more boilerplate and increases the work of the garbage collector.
-
-Sveltekit reduces 65 character codes of Nextjs codes into 11 character codes.
+There are many issues in svelte, but I'll mainly focus on these three issues highlighted by the javascript community.
 
 Source : <Link source="https://upmostly.com/svelte/what-are-the-cons-of-using-svelte" title="What Are the Cons of Using Svelte?" />
 
@@ -162,7 +162,7 @@ Source : <Link source="https://upmostly.com/svelte/what-are-the-cons-of-using-sv
 
 According to the state of javascript 2022, svelte falls in the category of the most loved framework.
 
-But svelte is still new in the javascript war compared to its other aliases like react, vue, etc. React was released in May 2013 by facebook, vue was released in February 2014 by Evan You, svelte was released in November 2016, and sveltekit in December 2022  by Rich Harris.
+But svelte is still new in the javascript war compared to its other aliases like react, vue, etc. React was released in May 2013 by Facebook, vue in February 2014 by Evan You, svelte in November 2016, and sveltekit in December 2022  by Rich Harris.
 
 As you can see, other frameworks on the javascript war for a decade. That gives developers time to explore it in their side projects, and get a more precise fix of framework issues, etc.
 
@@ -197,8 +197,6 @@ As you know now, the svelte and sveltekit community is small, which eventually m
 For alpha experienced developers, it's not a big headache, but for beginners or someone who needs to finish some project quickly, it can become a pain for the developer.
 
 You will not find many open-source library options for your task, so you have to count on yourself.
-
-
 </Data>
 
 <SubHeading subHeading="Conclusion" />
@@ -214,3 +212,5 @@ The framework does not matter how you will handle and use that framework in your
 <Github />
 
 </Data>
+
+<Card post={recommand} />

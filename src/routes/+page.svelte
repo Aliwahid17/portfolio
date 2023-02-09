@@ -2,38 +2,32 @@
   import Blogs from "$lib/components/Blogs.svelte";
   import Intro from "$lib/components/Intro.svelte";
   import Projects from "$lib/components/Projects.svelte";
-  import { recentItems } from "$lib/store";
   import SEO from '$lib/components/SEO/index.svelte'
-
+	import type { PageData } from "./$types";
+  export let data:PageData
 
   const seoProps  = {
     title : "Wahid Ali - Home",
-    metadescription:"I'm a self taught full stack developer with good knowledge and experience with the latest web technologies my main goal is to work with talented people through my work and technical content",
+    metadescription:"I'm Wahid Ali, Full Stack Developer creating innovative projects. Expertise & experience in web development. Explore my latest work on my personal website.",
     slug : '',
     type : 'website',
     image : 'home.webp',
     imageAlt : "If at first, you don't succeed you must be programmer."
   }
 
+
 </script>
-
-
 
 <SEO values={seoProps} />
 
 <main class="mx-2">
   <Intro />
   <section class="bg-[#181818] my-11   text-white  ">
-    <h2 class=" text-2xl font-semibold flex justify-center items-center py-12  ">
+    <p class=" text-2xl font-semibold flex justify-center items-center py-12  ">
       Recommended Reading <span class="wave">📖</span>
-    </h2>
+    </p>
 
-    {#if typeof $recentItems.recentBlogs[0] !== "undefined"}
-      <Blogs
-        posts={$recentItems.recentBlogs}
-        parseTag={$recentItems.blogsTag}
-      />
-    {/if}
+    <Blogs posts={data.posts} parseTag={data.tags} />
 
     <div class="flex justify-center items-center  py-10 ">
       <a
@@ -51,9 +45,9 @@
 
   <section class="  text-white  ">
     <section class="my-11">
-      <h2 class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></h2>
+      <p class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></p>
 
-      <Projects value={$recentItems.recentProjects} />
+      <Projects value={data.projects} color={data.color} />
 
       <div class="flex justify-center items-center  py-10 ">
         <a

@@ -1,7 +1,8 @@
 import type { Blog } from 'src/app';
-import type { PageLoad } from './$types'
+import type { PageLoad } from '../../$types';
 
-export const load: PageLoad = async ({ params }) => {
+
+export const load = (async  ({ params }) => {
 
     const { slug } = params;
     const postPromie = import(`../../../lib/content/${slug}.md`)
@@ -20,6 +21,8 @@ export const load: PageLoad = async ({ params }) => {
             status: 404,
         }
     }
+
+
 
     const {
         author,
@@ -53,4 +56,4 @@ export const load: PageLoad = async ({ params }) => {
         page,
     }
 
-}
+}) satisfies PageLoad

@@ -15,7 +15,7 @@
   const seoProps = {
     title: "Wahid Ali - About",
     metadescription:
-      'Get in touch with Wahid Ali, contact me for any web development related works.',
+      'Get to know Wahid Ali, a Full Stack Developer driven to bring ideas to life. Discover my expertise & experience in web development on my about page.',
     slug: "about",
     type:"website",
     image : 'home.webp',

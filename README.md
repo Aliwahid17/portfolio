@@ -40,8 +40,7 @@ If you find any error and know see some scope of improvements in my projects.Ple
 |    |    └── (contains Typescript logic)
 |    |-- routes
 |    |    |-- about
-|    |    |     |── +page.svelte
-|    |    |     └── +page.ts
+|    |    |     └── +page.svelte
 |    |    |-- blogs
 |    |    |     |── [slug]
 |    |    |     |      |── +page.svelte
@@ -61,7 +60,9 @@ If you find any error and know see some scope of improvements in my projects.Ple
 |    |    |     └── +page.ts
 |    |    |-- +error.svelte
 |    |    |-- +layout.svelte
-|    |    └── +page.svelte
+|    |    |-- +layout.ts
+|    |    |── +page.svelte
+|    |    └── +page.ts
 |    |-- app.css
 |    |-- app.d.ts
 |    |-- app.html
@@ -75,6 +76,8 @@ If you find any error and know see some scope of improvements in my projects.Ple
 |-- .eslintrc.cjs
 |-- .gitignore
 |-- .npmrc
+|-- .prettierignore
+|-- .prettierc
 |-- mdsvex.config.js
 |-- package.json
 |-- pnpm-lock.yaml

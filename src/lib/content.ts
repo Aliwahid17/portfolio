@@ -45,6 +45,3 @@ export const content = async () => {
 
     return { posts, parseTag };
 };
-
-
-

@@ -1,12 +1,14 @@
 <script lang="ts">
   import Tags from "$lib/components/Tags.svelte";
   import { tag } from "$lib/tag";
-  import { blogs } from "$lib/store";
   import SEO from "$lib/components/SEO/index.svelte";
+	import type { PageData } from "../$types";
+
+  export let data : PageData
 
   const seoProps = {
     title: "Wahid Ali - Tags",
-    metadescription:"Page contains all hastags used in blogs.So,you can search according to it",
+    metadescription:"Join the conversation with Wahid Ali, Full Stack Developer. Explore blogs according to hashtags.",
     slug: "tags",
     type:"website",
     image : 'home.webp',
@@ -20,5 +22,5 @@
   <h1 class=" text-2xl font-semibold flex justify-center items-center py-11 ">
     All Tags <span class="wave"> #️⃣</span>
   </h1>
-  <Tags tags={tag($blogs.parseTag)} />
+  <Tags tags={tag(data.tags)} />
 </section>

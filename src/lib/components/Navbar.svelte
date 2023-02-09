@@ -6,7 +6,7 @@
 </script>
 
 <header
-  class="bg-[#1e1f1f]  z-10 sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5  "
+  class="bg-[#1e1f1f]/70 backdrop-blur z-10 sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5  "
 >
   <div class="container flex flex-wrap items-center justify-between mx-auto ">
     <a
@@ -19,7 +19,7 @@
     </a>
 
     <button
-      class=" md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none bg-[#1e1f1f]"
+      class=" md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none "
       on:click={() => (nav = !nav)}
       title="menu"
     >

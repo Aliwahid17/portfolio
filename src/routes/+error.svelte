@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Error from "$lib/assets/not.webp";
+  import Error from "$lib/assets/404.webp";
   import { page } from "$app/stores";
   const title = `Wahid Ali - ${$page.status}: ${$page.error?.message}`;
 </script>

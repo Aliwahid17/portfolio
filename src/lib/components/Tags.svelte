@@ -12,7 +12,7 @@
       class={`whitespace-nowrap rounded-full first-letter:capitalize  px-2.5 py-0.5 text-2xl font-semibold  ${
         color()
       }`}
-      data-sveltekit-reload=""
+      data-sveltekit-preload-data="hover"
     >
       <span class={``}>
         {`#${tag}`}
