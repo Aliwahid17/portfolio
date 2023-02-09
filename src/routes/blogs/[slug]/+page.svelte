@@ -38,4 +38,3 @@
 		</article>
 	</div>
 </main>
-
