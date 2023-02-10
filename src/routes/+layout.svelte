@@ -71,10 +71,11 @@
 		}
 		gtag('js', new Date());
 
-		gtag('config', 'G-8P4ZG0K93R');
+		gtag('config', 'G-8P4ZG0K93R',{
+			page_path: window.location.pathname
+		});
 	</script>
 	<script
-		type="text/partytown"
 		async
 		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9331685192408853"
 		crossorigin="anonymous"
