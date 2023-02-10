@@ -5,7 +5,8 @@ import { partytownVite } from '@builder.io/partytown/utils';
 
 const config: UserConfig = {
 	plugins: [sveltekit(), partytownVite({
-		dest: join(process.cwd(), 'script', '~partytown')
+		dest: join(process.cwd(), 'build', '~partytown'),
+		debug : false
 	})],
 	define: {
 		'import.meta.env.VERCEL_ANALYTICS_ID': JSON.stringify(process.env.VERCEL_ANALYTICS_ID)
