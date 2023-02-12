@@ -36,7 +36,7 @@
 		partytown = {
 			forward: ['dataLayer.push'],
 			resolveUrl: (url) => {
-				const siteUrl = 'https://wahidali.dev/proxytown';
+				const siteUrl = 'https://www.wahidali.dev/proxytown';
 
 				if (url.hostname === 'www.googletagmanager.com') {
 					const proxyUrl = new URL(`${siteUrl}/gtm`);
