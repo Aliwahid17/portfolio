@@ -62,7 +62,7 @@
 	<script
 		type="text/partytown"
 		async
-		src="https://www.googletagmanager.com/gtag/js?id=G-8P4ZG0K93R"
+		src="https://www.googletagmanager.com/gtag/js?id=G-MGP9W3XBHL"
 	></script>
 	<script type="text/partytown">
 		window.dataLayer = window.dataLayer || [];
@@ -71,7 +71,7 @@
 		}
 		gtag('js', new Date());
 
-		gtag('config', 'G-8P4ZG0K93R',{
+		gtag('config', 'G-MGP9W3XBHL',{
 			page_path: window.location.pathname
 		});
 	</script>
