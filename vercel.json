@@ -8,5 +8,13 @@
 			"source": "/proxytown/ga",
 			"destination": "https://www.google-analytics.com/analytics.js"
 		}
+	],
+	"headers": [
+		{
+			"source": "proxytown/(.*)",
+			"headers": [
+				{ "key": "Access-Control-Allow-Origin", "value": "*" }
+			]
+		}
 	]
 }
