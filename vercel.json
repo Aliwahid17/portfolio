@@ -2,13 +2,19 @@
 	"rewrites": [
 		{
 			"source": "/proxytown/gtm",
-			"destination": "https://www.googletagmanager.com/gtag/js",
-			"headers" : { "key": "Access-Control-Allow-Origin", "value": "*" }
+			"destination": "https://www.googletagmanager.com/gtag/js"
 		},
 		{
 			"source": "/proxytown/ga",
-			"destination": "https://www.google-analytics.com/analytics.js",
-			"headers": { "key": "Access-Control-Allow-Origin", "value": "*" }
+			"destination": "https://www.google-analytics.com/analytics.js"
+		}
+	],
+	"headers": [
+		{
+			"source": "proxytown/(.*)",
+			"headers": [
+				{ "key": "Access-Control-Allow-Origin", "value": "*" }
+			]
 		}
 	]
 }
