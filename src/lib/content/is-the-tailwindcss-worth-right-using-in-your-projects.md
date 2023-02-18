@@ -32,6 +32,11 @@ readingTime : 3
             postTitle : "What things sveltekit offer better than other javascript frameworks?",
             datePublished: "2023-01-20T10:50:46.469Z",
             slug : "what-things-sveltekit-offer-better-than-other-javascript-frameworks"
+        },
+        {
+            postTitle : "Boost Your JavaScript Skills - Top 9 GitHub Repositories for Learning?",
+            datePublished: "2023-02-18T16:41:22.541Z",
+            slug : "boost-your-javaScript-skills-top-9-gitHub-repositories-for-learning"
         }
     ]
 

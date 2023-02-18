@@ -16,22 +16,12 @@ export const load: PageLoad = async ({ params }) => {
         }
     }
 
-    const seoProps = {
-        title: `Wahid Ali - ${params.slug.charAt(0).toUpperCase() + params.slug.slice(1)}`,
-        metadescription: `Join the conversation with Wahid Ali, Full Stack Developer. Explore ${params.slug} blogs here.`,
-        slug: `tags/${params.slug}`,
-        type: "website",
-        image: 'home.webp',
-        imageAlt: "If at first, you don't succeed you must be programmer."
-    };
-
     if (blog.length > 0) {
         return {
             'blogs': blog,
             'blogsTag': blogsTag,
             'slug': params.slug,
             'tags' : contents.parseTag,
-            'seoProps' : seoProps
         }
     }
 
