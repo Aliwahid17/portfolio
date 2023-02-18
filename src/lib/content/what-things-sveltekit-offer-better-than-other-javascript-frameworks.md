@@ -35,6 +35,11 @@ readingTime : 5
             postTitle : "Is the Tailwindcss worth right using in your projects?",
             datePublished: "2023-01-20T10:50:46.469Z",
             slug : "is-the-tailwindcss-worth-right-using-in-your-projects"
+        },
+        {
+            postTitle : "Boost Your JavaScript Skills - Top 9 GitHub Repositories for Learning?",
+            datePublished: "2023-02-18T16:41:22.541Z",
+            slug : "boost-your-javaScript-skills-top-9-gitHub-repositories-for-learning"
         }
     ]
 

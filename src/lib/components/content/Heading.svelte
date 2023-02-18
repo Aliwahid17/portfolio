@@ -34,7 +34,7 @@
     {#each tags.split(",") as tag}
       <a
         href={`/tags/${tag}`}
-        class={`${color()} whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-base font-semibold  bg-cyan-700 text-white`}
+        class={`${color()} whitespace-nowrap first-letter:capitalize rounded-full  px-2.5 py-0.5 text-base font-semibold  `}
       >
         {`#${tag}`}
       </a>

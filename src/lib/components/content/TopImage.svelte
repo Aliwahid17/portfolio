@@ -8,7 +8,7 @@
   <img
     class="rounded-md  my-3"
     width="750"
-    height="268"
+    height="234"
     src={image}
     alt={imageAlt}
     loading={load}
