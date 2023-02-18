@@ -136,7 +136,7 @@ Source : <Link source="https://data-flair.training/blogs/advantages-disadvantage
 
 <SubHeading subHeading="Best GitHub Repositories for learning and improving your javascript skills?" />
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">FreeCodeCamp</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">FreeCodeCamp</h3>
 
 <GithubImage repo="freecodecamp/freecodecamp" imageAlt="freecodecamp" />
 
@@ -144,7 +144,7 @@ Github : <Link source="https://github.com/freeCodeCamp/freeCodeCamp" title="http
 
 FreeCodeCamp is a non-profit organization that provides free online coding courses. Their GitHub repository contains lots of projects and resources for learning JavaScript. Their website has lots of interactive learning tutorials, and their youtube has learning videos too.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">You Don't Know JS</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">You Don't Know JS</h3>
 
 <GithubImage repo="getify/You-Dont-Know-JS" imageAlt="getify" />
 
@@ -152,7 +152,7 @@ Github : <Link source="https://github.com/getify/You-Dont-Know-JS" title="https:
 
 You Don't Know JS is a series of books that cover the finer details of the JavaScript language. The GitHub repository contains the code examples used in the books and provides an excellent resource for those looking to improve their JavaScript skills.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Eloquent JavaScript</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Eloquent JavaScript</h3>
 
 <GithubImage repo="marijnh/Eloquent-JavaScript" imageAlt="marijnh" />
 
@@ -160,7 +160,7 @@ Github : <Link source="https://github.com/marijnh/Eloquent-JavaScript" title="ht
 
 Eloquent JavaScript is a popular book for learning JavaScript. The GitHub repository contains the code examples used in the book and additional resources for learning the language.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript30</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript30</h3>
 
 <GithubImage repo="wesbos/JavaScript30" imageAlt="wesbos" />
 
@@ -168,7 +168,7 @@ Github : <Link source="https://github.com/wesbos/JavaScript30" title="https://gi
 
 JavaScript30 is a free 30-day coding challenge that teaches you how to build 30 projects using vanilla JavaScript. The GitHub repository contains the starter files for each project and the solutions.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Modern JavaScript Cheatsheet</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Modern JavaScript Cheatsheet</h3>
 
 <GithubImage repo="mbeaudru/modern-js-cheatsheet" imageAlt="mbeaudru" />
 
@@ -176,7 +176,7 @@ Github : <Link source="https://github.com/mbeaudru/modern-js-cheatsheet" title="
 
 The Modern JavaScript Cheatsheet is a comprehensive guide to modern JavaScript. The GitHub repository contains the code examples used in the handbook and additional resources for learning the language.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript Info</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript Info</h3>
 
 <GithubImage repo="javascript-tutorial/en.javascript.info" imageAlt="javascript-tutorial" />
 
@@ -184,7 +184,7 @@ Github : <Link source="https://github.com/javascript-tutorial/en.javascript.info
 
 JavaScript Info is a free online book that teaches you how to code in JavaScript. The GitHub repository contains the code examples used in the book and additional resources for learning the language.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Awesome JavaScript</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">Awesome JavaScript</h3>
 
 <GithubImage repo="sorrycc/awesome-javascript" imageAlt="sorrycc" />
 
@@ -192,7 +192,7 @@ Github : <Link source="https://github.com/sorrycc/awesome-javascript" title="htt
 
 It is a curated list of resources for learning and mastering JavaScript. The GitHub repository contains a lot of resources, including tutorials, tools, and libraries.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript Design Patterns</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript Design Patterns</h3>
 
 <GithubImage repo="addyosmani/essential-js-design-patterns" imageAlt="addyosmani" />
 
@@ -200,7 +200,7 @@ Github : <Link source="https://github.com/addyosmani/essential-js-design-pattern
 
 JavaScript Design Patterns is a free online book that teaches you how to write modular and maintainable JavaScript code. The GitHub repository contains the code examples used in the book and additional resources for learning the language.
 
-<h4 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript Algorithms and Data Structures</h4>
+<h3 class="font-bold text-lg lg:text-xl xl:text-2xl text-cyan-400 first:capitalize my-3">JavaScript Algorithms and Data Structures</h3>
 
 <GithubImage repo="trekhleb/javascript-algorithms" imageAlt="trekhleb" />
 
