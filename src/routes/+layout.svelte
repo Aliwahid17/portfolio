@@ -75,11 +75,8 @@
 			page_path: window.location.pathname
 		});
 	</script>
-	<script
-		async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9331685192408853"
-		crossorigin="anonymous"
-	></script>
+	
+
 </svelte:head>
 
 <Navbar />
