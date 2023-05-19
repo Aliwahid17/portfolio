@@ -1,9 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
 @layer utilities {
+
+    :root {
+        --purple: rgb(123, 31, 162);
+        --violet: rgb(103, 58, 183);
+        --pink: rgb(244, 143, 177);
+    }
+
+    body {
+        /* background: #121212; */
+        background: linear-gradient(117.25deg, #383737 0%, #312F2F 46.62%, #1C1616 99.08%);
+        font-family: 'Expletus Sans', sans-serif;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+        color: white;
+        /* backdrop-filter: blur(1000px); */
+        /* backdrop-filter: blur(1000px); */
+        /* filter: blur(1000px); */
+    }
+
+
+    @keyframes background-pan {
+        from {
+            background-position: 0% center;
+        }
+
+        to {
+            background-position: -200% center;
+        }
+    }
+
+    @keyframes scale {
+
+        from,
+        to {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+    /* p {
+        color: white;
+        font-family: "Rubik", sans-serif;
+        font-size: clamp(2em, 2vw, 4em);
+        font-weight: 400;
+        margin: 0px;
+        padding: 20px;
+        text-align: center;
+    } */
+
+    p>.magic {
+        display: inline-block;
+        position: relative;
+    }
+
+    p>.magic>.magic-star {
+        --size: clamp(20px, 1.5vw, 30px);
+
+        animation: scale 700ms ease forwards;
+        display: block;
+        height: var(--size);
+        left: var(--star-left);
+        position: absolute;
+        top: var(--star-top);
+        width: var(--size);
+    }
+
+    p>.magic>.magic-star>svg {
+        animation: rotate 1000ms linear infinite;
+        display: block;
+        opacity: 0.7;
+    }
+
+    p>.magic>.magic-star>svg>path {
+        fill: var(--violet);
+    }
+
+    p>.magic>.magic-text {
+        animation: background-pan 3s linear infinite;
+        background: linear-gradient(to right,
+                var(--purple),
+                var(--violet),
+                var(--pink),
+                var(--purple));
+        background-size: 200%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        white-space: nowrap;
+    }
+
+    #container {
+        position: relative;
+        overflow: hidden;
+    }
+
+    @keyframes rotate {
+        from {
+            rotate: 0deg;
+        }
+
+        50% {
+            scale: 1 1.5;
+        }
+
+        to {
+            rotate: 360deg;
+        }
+    }
+
+    #blob {
+        background-color: white;
+        height: 20vmax;
+        aspect-ratio: 1;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        /* transform: translate(-50%,-50%); */
+        /* translate: ; */
+        border-radius: 50%;
+        background: linear-gradient(to right, aquamarine, mediumpurple);
+        animation: rotate 20s infinite;
+        opacity: 0.8;
+        /* filter: blur(20px); */
+        /* backdrop-filter: blur(12vmax); */
+        /* z-index: 1; */
+    }
+
+    /* .blur {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        backdrop-filter: blur(12vmax);
+    } */
 
 
     ::-webkit-scrollbar {

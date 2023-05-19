@@ -2,8 +2,9 @@
   import Social from "./Social.svelte";
 </script>
 
-<footer class="text-white my-10 mx-6 md:mx-32 lg:mx-60 xl:mx-96 ">
-  <article>
+<!-- <footer class="text-white my-10 mx-6 md:mx-32 lg:mx-60 xl:mx-96 "> -->
+<footer class="text-white py-10 mx-6 md:mx-32 lg:mx-60 xl:mx-96 ">
+<article>
     <p class=" text-xl  text-center ">I'm a freelance Full Stack Web Developer who enjoys learning <span class="hover:wave">🏫</span>,building <span class="hover:wave">🏗</span>,sharing<span class="hover:wave">👩‍💻</span> and collaborating <span class="hover:wave">🙌</span> software works with other Developers.</p>
   </article>
 
@@ -13,7 +14,8 @@
 
   <span class=" text-lg ">&#169; Copyright 2023 <a href="/" class="font-bold underline mx-1  ">Wahid Ali</a></span>
 
-  <p class="flex justify-evenly items-center text-lg my-5  ">
+  <p class="flex justify-evenly items-center text-lg py-5  ">
+  <!-- <p class="flex justify-evenly items-center text-lg my-5  "> -->
     <a
       href="/"
       class="text-base font-semibold hover:underline hover:text-cyan-400"

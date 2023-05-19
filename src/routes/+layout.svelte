@@ -9,9 +9,77 @@
 
 	import { onMount } from 'svelte';
 	import { partytownSnippet } from '@builder.io/partytown/integration';
+	import GlowEffect from '$lib/components/GlowEffect.svelte';
+	import { typewriter } from '$lib/typewriter';
+	import { children, element } from 'svelte/internal';
+	import Blogs from '$lib/components/Blogs.svelte';
 
 	let scriptEl: any;
 	onMount(() => {
+		const typewriters = document.querySelectorAll('.typewriter');
+		typewriters.forEach((element) => {
+			element.addEventListener('mouseover', typewriter);
+		});
+
+		// const blob = document.getElementsByClassName('blob');
+		// window.onpointermove = (event) => {
+		// 	const { clientX, clientY } = event;
+
+		// 	blob[0]?.animate(
+		// 		{
+		// 			left: `${clientX}px`,
+		// 			top: `${clientY}px`
+		// 		},
+		// 		{ duration: 3000, fill: 'forwards' }
+		// 	);
+		// };
+
+		const container = document.getElementById('container');
+		console.log(container);
+		const blob = document.getElementById('blob');
+		window.onpointermove = (event) => {
+			const { clientX, clientY } = event;
+
+			const boundingRect = blob!.getBoundingClientRect();
+			const blobWidth = boundingRect.width;
+			const blobHeight = boundingRect.height;
+
+			// Calculate the maximum left and top values to prevent overflow
+			// const maxLeft = window.innerWidth - blobWidth;
+			// const maxTop = window.innerHeight - blobHeight;
+
+			const maxLeft = document.documentElement.scrollWidth - blobWidth + 70;
+			const maxTop = document.documentElement.scrollHeight - blobHeight + 85;
+
+			// Calculate the left and top values
+			let left = clientX - blobWidth / 4;
+			let top = clientY - blobHeight / 4;
+
+			// left = Math.max(0, Math.min(maxLeft, left));
+			// top = Math.max(0, Math.min(maxTop, top));
+
+			left = Math.max(0, Math.min(maxLeft, left + window.pageXOffset));
+			top = Math.max(0, Math.min(maxTop, top + window.pageYOffset ));
+
+			// Check if the left value is greater than the maximum allowed value
+			// if (left > maxLeft) {
+			// 	left = maxLeft;
+			// }
+
+			// // Check if the top value is greater than the maximum allowed value
+			// if (top > maxTop) {
+			// 	top = maxTop;
+			// }
+
+			blob!.animate(
+				{
+					left: `${left}px`,
+					top: `${top}px`
+				},
+				{ duration: 3000, fill: 'forwards' }
+			);
+		};
+
 		if (scriptEl) {
 			scriptEl.textContent = partytownSnippet();
 		}
@@ -27,6 +95,9 @@
 		});
 	}
 	inject();
+
+	let x = 0;
+	let y = 0;
 </script>
 
 <svelte:head>
@@ -71,17 +142,48 @@
 		}
 		gtag('js', new Date());
 
-		gtag('config', 'G-MGP9W3XBHL',{
+		gtag('config', 'G-MGP9W3XBHL', {
 			page_path: window.location.pathname
 		});
 	</script>
-	<script
-		async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9331685192408853"
-		crossorigin="anonymous"
-	></script>
 </svelte:head>
 
-<Navbar />
+<!-- <GlowEffect /> -->
+<!--
+	
+-->
+
+<!-- <div class="blob" />
+	
+	<div class="blur" /> -->
+<!-- <div class="blob " /> -->
+<!-- <div class="blob"></div> -->
+<!-- <div class="blob"/> -->
+<!-- <div class="  backdrop-blur-3xl"> -->
+<!-- <div class="blob"></div> -->
+<!-- <div class="blur"></div> -->
+<!-- <Footer />  -->
+<!-- </div> -->
+<!-- 
+	<div class="blur" /> -->
+
+<!-- <div id="container" class="backdrop-blur-3xl">
+		<div class="blob" /> -->
+<!-- <div class="backdrop-blur-3xl"> -->
+<!--
+				<div id="container" class="backdrop-blur-3xl"> -->
+<!-- <div id="container"> -->
+
+	
+	<div id="blob" />
+	<!-- <div class="blur"></div> -->
+	<!-- <div class=""> -->
+		<div class="backdrop-blur-2xl">
+		<Navbar />
+<!-- <div class="blur"></div> -->
 <slot />
-<Footer />
+<!-- <Footer /> -->
+</div>
+<!-- </div> -->
+<!-- </div> -->
+<!-- </div> -->

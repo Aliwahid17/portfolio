@@ -1,28 +1,27 @@
 <script lang="ts">
-  import Blogs from "$lib/components/Blogs.svelte";
-  import Intro from "$lib/components/Intro.svelte";
-  import Projects from "$lib/components/Projects.svelte";
-  import SEO from '$lib/components/SEO/index.svelte'
-	import type { PageData } from "./$types";
-  export let data:PageData
+	import Blogs from '$lib/components/Blogs.svelte';
+	import Intro from '$lib/components/Intro.svelte';
+	import Projects from '$lib/components/Projects.svelte';
+	import SEO from '$lib/components/SEO/index.svelte';
+	import type { PageData } from './$types';
+	export let data: PageData;
 
-  const seoProps  = {
-    title : "Wahid Ali - Home",
-    metadescription:"I'm Wahid Ali, Full Stack Developer creating innovative projects. Expertise & experience in web development. Explore my latest work on my personal website.",
-    slug : '',
-    type : 'website',
-    image : 'home.webp',
-    imageAlt : "If at first, you don't succeed you must be programmer."
-  }
-
-
+	const seoProps = {
+		title: 'Wahid Ali - Home',
+		metadescription:
+			"I'm Wahid Ali, Full Stack Developer creating innovative projects. Expertise & experience in web development. Explore my latest work on my personal website.",
+		slug: '',
+		type: 'website',
+		image: 'home.webp',
+		imageAlt: "If at first, you don't succeed you must be programmer."
+	};
 </script>
 
 <SEO values={seoProps} />
 
-<main class="mx-2">
-  <Intro />
-  <section class="bg-[#181818] my-11   text-white  ">
+<main class="">
+	<Intro />
+	<!-- <section class="bg-[#181818] my-11   text-white  ">
     <p class=" text-2xl font-semibold flex justify-center items-center py-12  ">
       Recommended Reading <span class="wave">📖</span>
     </p>
@@ -43,6 +42,7 @@
     </div>
   </section>
 
+
   <section class="  text-white  ">
     <section class="my-11">
       <p class=" text-xl md:text-2xl font-semibold flex justify-center items-center py-11 ">Check out the stuff I've built & Collab <span class="animate-bounce">👇</span></p>
@@ -62,5 +62,14 @@
         </a>
       </div>
     </section>
-  </section>
+  </section> -->
+
+	<section
+		style="background: rgba(33, 28, 28, 0.54);"
+		class="py-10"
+	>
+  <!-- <h2 class="typewriter text-2xl flex justify-center items-center  py-10 font-semibold" data-value="RECOMMENDED READING 📖" >RECOMMENDED READING <span class="wave">📖</span></h2> -->
+    <h2 class="typewriter text-2xl flex justify-center items-center  py-10 font-semibold"><span class="typewriter"  data-value="RECOMMENDED READING">RECOMMENDED READING</span><span class="wave">📖</span></h2>
+
+</section>
 </main>

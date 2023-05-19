@@ -2,24 +2,42 @@
   import About from "$lib/assets/about.svg";
   import Project from "$lib/assets/projects.svg";
   import Blog from "$lib/assets/blog.svg";
+	import { onMount } from "svelte";
+
   let nav = false;
+  let bar = 0;
+
+  onMount(() => {
+    window.addEventListener('scroll',function(){
+      bar = this.scrollY
+    })
+  })
+
 </script>
 
 <header
-  class="bg-[#1e1f1f]/70 backdrop-blur z-10 sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5  "
+class={`${bar > 0 ? "bg-[#1e1f1f]/70 backdrop-blur " : nav && "bg-[#1e1f1f]/70  backdrop-blur"}  delay-500 duration-700 ease-in-out transition-all    z-10 sticky top-0  px-2 sm:px-4 py-2.5`}
 >
+<!-- class={`${bar > 0 && "bg-[#1e1f1f]/70 backdrop-blur"} ${nav && "bg-[#1e1f1f]/70 backdrop-blur"}  delay-500 duration-700 ease-in-out transition-all    z-10 sticky top-0  px-2 sm:px-4 py-2.5`} -->
+<!-- class={`${bar > 0 && !nav && "bg-[#1e1f1f]/70 backdrop-blur"} delay-500 duration-700 ease-in-out transition-all backdrop-blur  z-10 sticky top-0  px-2 sm:px-4 py-2.5`} -->
+  <!-- class={`${bar > 0 && !nav && "bg-[#1e1f1f]/70 backdrop-blur"} delay-500 duration-700 ease-in-out transition-all backdrop-blur  z-10 sticky top-0  px-2 sm:px-4 py-2.5`} -->
+  <!-- class={`${bar > 0 && "bg-[#1e1f1f]/70 backdrop-blur"} ${nav && "bg-[#1e1f1f]/70 backdrop-blur"}  delay-500 duration-700 ease-in-out transition-all    z-10 sticky top-0  px-2 sm:px-4 py-2.5`} -->
+  <!-- class={`bg-[#1e1f1f]/70 backdrop-blur z-10 sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5`} -->
+<!-- <header
+  class="bg-[#1e1f1f]/70 backdrop-blur z-10 sticky top-0 border-gray-200 px-2 sm:px-4 py-2.5  "
+> -->
   <div class="container flex flex-wrap items-center justify-between mx-auto ">
     <a
       data-sveltekit-preload-data="hover"
       href="/"
-      class="text-white font-mono font-extrabold text-2xl flex group  "
+      class="text-white font-expletus font-extrabold text-2xl flex group  "
     >
-      <div>Wahid Ali</div>
-      <div class=" group-hover:wave  ">👋</div>
+      <span class="typewriter" data-value="WAHID ALI" >WAHID ALI</span>
+      <span class=" group-hover:wave  ">👋</span>
     </a>
 
     <button
-      class=" md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none "
+      class="md:hidden flex text-gray-500 w-10 h-10 relative focus:outline-none  "
       on:click={() => (nav = !nav)}
       title="menu"
     >
@@ -49,12 +67,11 @@
 
     <nav
       class={`items-center ${
-        !nav && "hidden"
-      } justify-between  w-full md:flex md:w-auto md:order-1`}
-      id="navbar-cta"
+        !nav && "hidden  "
+      } justify-between w-full md:flex md:w-auto md:order-1`}
     >
       <ul
-        class="flex  flex-col p-4 mt-1 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0    "
+        class="flex justify-center items-center flex-col p-4 mt-1 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0"
       >
         <li>
           <a
@@ -64,17 +81,18 @@
             data-sveltekit-preload-data="hover"
           >
             <div
-              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-500 md:p-0"
+              class=" typewriter block transform  text-lg group-hover:underline mx-2   transition delay-100 duration-500 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-400 md:p-0"
+              data-value="BLOGS"
             >
-              Blogs
+              BLOGS
             </div>
-            <img
+            <!-- <img
               src={Blog}
               alt="Blogs"
               class="flex justify-center items-center group-hover:wave w-10 h-10 "  width="40" height="40"
               loading="lazy"
               title="Blogs"
-            />
+            /> -->
           </a>
         </li>
 
@@ -85,20 +103,24 @@
             on:click={() => (nav = !nav)}
             data-sveltekit-preload-data="hover"
           >
+
             <div
-              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 lg:pl-3 pl-1 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-500 md:p-0  "
+              class="typewriter block transform  text-lg group-hover:underline mx-2   transition delay-150 duration-700 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-400 md:p-0 "
+              data-value="PROJECTS"
             >
-              Projects
+              PROJECTS
             </div>
-            <img
+            <!-- <img
               src={Project}
               alt="Projects"
               class="flex justify-center items-center group-hover:wave  w-10 h-10 " width="40" height="40"
               loading="lazy"
               title="Projects"
-            />
+            /> -->
           </a>
         </li>
+
+        
 
         <li>
           <a
@@ -108,17 +130,18 @@
             data-sveltekit-preload-data="hover"
           >
             <div
-              class="block transform  text-lg group-hover:underline mx-2   transition delay-75 duration-300 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-500 md:p-0"
+              class=" typewriter block transform  text-lg group-hover:underline mx-2   transition delay-100 duration-500 group-hover:scale-125  font-semibold py-2 pl-3 pr-4 rounded text-white group-hover:bg-transparent group-hover:text-cyan-400 md:p-0"
+              data-value="ABOUT"
             >
-              About
+              ABOUT
             </div>
-            <img
+            <!-- <img
               src={About}
               alt="About"
               class="flex justify-center items-center group-hover:wave w-10 h-10 " width="40" height="40"
               loading="lazy"
               title="About"
-            />
+            /> -->
           </a>
         </li>
       </ul>
