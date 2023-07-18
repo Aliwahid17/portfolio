@@ -4,7 +4,7 @@
   const siteURL = "https://www.wahidali.dev/";
   const facebookPage = "https://www.facebook.com/aliwahid17";
   const facebookAuthorPage = "https://www.facebook.com/aliwahid17";
-  const twitterUsername = "https://www.facebook.com/aliwahid17";
+  const twitterUsername = "https://twitter.com/ALI_WAHID_17";
   const author = "Wahid Ali";
   const image = `https://www.wahidali.dev/assets/${values.image}`;
 </script>
